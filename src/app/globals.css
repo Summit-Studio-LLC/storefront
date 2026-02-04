@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --color-forest: #2D5F3E;
+  --color-stone: #4A4A4A;
+  --color-offwhite: #FAFAF8;
+  --color-accent: #C46A32;
+  --color-charcoal: #1a1a1a;
+
+  /* Semantic */
+  --background: var(--color-offwhite);
+  --foreground: var(--color-stone);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-forest: #2D5F3E;
+  --color-stone: #4A4A4A;
+  --color-offwhite: #FAFAF8;
+  --color-accent: #C46A32;
+  --color-charcoal: #1a1a1a;
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings use Forest Green */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-forest);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-forest);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
