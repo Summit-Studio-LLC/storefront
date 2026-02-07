@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Manrope } from 'next/font/google';
+import { Manrope, Instrument_Serif } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/data/site';
@@ -8,6 +8,14 @@ import './globals.css';
 const manrope = Manrope({
   variable: '--font-manrope',
   subsets: ['latin'],
+  display: 'swap',
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-instrument-serif',
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
@@ -48,7 +56,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${manrope.variable} antialiased`}>
+      <body className={`${manrope.variable} ${instrumentSerif.variable} antialiased`}>
         {/* Global Grain Texture Overlay */}
         <div className="fixed inset-0 pointer-events-none opacity-40 z-[5] bg-grain mix-blend-multiply" />
         <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
