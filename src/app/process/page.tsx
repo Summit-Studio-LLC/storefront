@@ -18,15 +18,24 @@ export default function ProcessPage() {
         <div className="absolute inset-0 bg-topography-lines opacity-40 pointer-events-none" />
 
         <div className="relative z-10 max-w-[960px] mx-auto px-6 text-center">
-          <span className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider uppercase text-forest bg-forest/10 rounded-full">
+          <span
+            className="animate-fade-in-up inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider uppercase text-forest bg-forest/10 rounded-full"
+            style={{ animationDelay: '0ms' }}
+          >
             Our Workflow
           </span>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-forest leading-[0.9] mb-8">
+          <h1
+            className="animate-fade-in-up font-serif text-5xl md:text-7xl lg:text-8xl text-forest leading-[0.9] mb-8"
+            style={{ animationDelay: '150ms' }}
+          >
             A Guided Path to
             <br />
             <span className="italic text-accent">Efficiency</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+          <p
+            className="animate-fade-in-up max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed"
+            style={{ animationDelay: '300ms' }}
+          >
             We map out the terrain of your business to build automation that scales. Like any great
             expedition, our process is structured, strategic, and designed to reach the summit.
           </p>

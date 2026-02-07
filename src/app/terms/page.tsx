@@ -210,17 +210,24 @@ export default function TermsPage() {
             <span className="text-lg font-bold text-accent/40">07.</span>
             Contact Us
           </h3>
-          <p className="mb-4 leading-relaxed text-stone">
-            If you have questions about these Terms of Service, please contact us by email:
+          <p className="mb-6 leading-relaxed text-stone">
+            If you have questions about these Terms of Service, please reach out.
           </p>
           <a
             href="mailto:legal@summitstudio.dev"
-            className="inline-flex items-center gap-2 font-bold text-forest"
+            className="group inline-flex items-center gap-4 rounded-xl border border-forest/10 bg-forest/5 p-5 transition-all hover:border-accent/30 hover:shadow-sm"
           >
-            <span className="material-symbols-outlined" aria-hidden="true">
-              mail
-            </span>
-            <span className="underline-center">legal@summitstudio.dev</span>
+            <div className="flex size-10 items-center justify-center rounded-lg bg-white text-forest shadow-sm transition-colors group-hover:bg-accent group-hover:text-white">
+              <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
+                mail
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Email Us
+              </span>
+              <span className="underline-center font-bold text-forest">legal@summitstudio.dev</span>
+            </div>
           </a>
         </section>
       </div>

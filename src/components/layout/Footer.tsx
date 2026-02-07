@@ -31,7 +31,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone hover:text-accent text-sm transition-colors"
+                    className="text-stone hover:text-accent text-sm transition-all duration-200 inline-block hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
@@ -48,7 +48,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone hover:text-accent text-sm transition-colors"
+                    className="text-stone hover:text-accent text-sm transition-all duration-200 inline-block hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
@@ -65,7 +65,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone hover:text-accent text-sm transition-colors"
+                    className="text-stone hover:text-accent text-sm transition-all duration-200 inline-block hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
