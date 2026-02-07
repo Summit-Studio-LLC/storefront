@@ -1,7 +1,29 @@
+export const landingServices = [
+  {
+    icon: 'precision_manufacturing',
+    title: 'Workflow Automation',
+    description:
+      'Streamline repetitive tasks and reclaim your time with intelligent bots that handle the heavy lifting for you.',
+  },
+  {
+    icon: 'monitoring',
+    title: 'Custom Dashboards',
+    description:
+      "Visualize your data with bespoke admin panels designed for clarity, giving you a bird's-eye view of your business.",
+  },
+  {
+    icon: 'hub',
+    title: 'System Integration',
+    description:
+      'Connect your favorite tools into one unified, efficient ecosystem. No more data silos or disconnected processes.',
+  },
+];
+
 export const solutions = [
   {
     title: 'Workflow Automation',
-    description: 'Replace manual data entry, paper forms, and spreadsheet chaos with custom digital workflows.',
+    description:
+      'Replace manual data entry, paper forms, and spreadsheet chaos with custom digital workflows.',
     startingAt: '$2,500',
   },
   {
@@ -21,7 +43,8 @@ export const solutions = [
   },
   {
     title: 'Customer Portals',
-    description: 'Give your clients a login to check status, submit requests, and access documents.',
+    description:
+      'Give your clients a login to check status, submit requests, and access documents.',
     startingAt: '$4,000',
   },
   {

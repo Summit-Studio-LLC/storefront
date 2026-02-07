@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/data/site';
 import './globals.css';
 
-const inter = Inter({
-  variable: '--font-inter',
+const manrope = Manrope({
+  variable: '--font-manrope',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -40,8 +40,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <div className="flex min-h-screen flex-col">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${manrope.variable} antialiased`}>
+        {/* Global Grain Texture Overlay */}
+        <div className="fixed inset-0 pointer-events-none opacity-40 z-[5] bg-grain mix-blend-multiply" />
+        <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

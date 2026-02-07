@@ -6,10 +6,6 @@ export const metadata: Metadata = {
     'Common questions about custom software, pricing, timelines, and working with Summit Studio. Transparent answers, no jargon.',
 };
 
-export default function FAQLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function FAQLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

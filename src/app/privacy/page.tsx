@@ -21,7 +21,9 @@ export default function PrivacyPage() {
 
           <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">1. Information We Collect</h2>
-            <p className="mb-4">We collect information that you provide directly to us, including:</p>
+            <p className="mb-4">
+              We collect information that you provide directly to us, including:
+            </p>
             <ul className="mb-4 list-inside list-disc space-y-2">
               <li>
                 <strong>Contact form submissions:</strong> Name, email address, company name, and
@@ -60,7 +62,9 @@ export default function PrivacyPage() {
 
           <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">3. Third-Party Services</h2>
-            <p className="mb-4">We use the following third-party services that may collect information:</p>
+            <p className="mb-4">
+              We use the following third-party services that may collect information:
+            </p>
             <ul className="list-inside list-disc space-y-2">
               <li>
                 <strong>Calendly:</strong> For scheduling consultations. Calendly has its own

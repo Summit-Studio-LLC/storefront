@@ -47,8 +47,8 @@ export default function ContactPage() {
                   Prefer to schedule directly?
                 </h3>
                 <p className="mb-6 text-[#4A4A4A]">
-                  Book a free 30-minute consultation at a time that works for you. We&apos;ll discuss
-                  your current challenges and explore how automation can help.
+                  Book a free 30-minute consultation at a time that works for you. We&apos;ll
+                  discuss your current challenges and explore how automation can help.
                 </p>
                 <a
                   href="https://calendly.com"

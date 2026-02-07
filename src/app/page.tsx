@@ -1,26 +1,18 @@
-import type { Metadata } from "next";
-import Hero from "@/components/sections/Hero";
-import PainPoints from "@/components/sections/PainPoints";
-import HowItWorks from "@/components/sections/HowItWorks";
-import PricingPreview from "@/components/sections/PricingPreview";
-import LocalTrust from "@/components/sections/LocalTrust";
-import BottomCTA from "@/components/sections/BottomCTA";
+import type { Metadata } from 'next';
+import Hero from '@/components/sections/Hero';
+import Services from '@/components/sections/Services';
 
 export const metadata: Metadata = {
-  title: "Summit Studio | Custom Software for Local Business",
+  title: 'Summit Studio | Custom Software for Local Business',
   description:
-    "Eliminate manual work and save 20+ hours per week. Custom software built for your business. Transparent pricing, no jargon. Cookeville, TN.",
+    'We design and build custom automation tools to help you scale without the chaos. Reach the summit of your efficiency.',
 };
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <PainPoints />
-      <HowItWorks />
-      <PricingPreview />
-      <LocalTrust />
-      <BottomCTA />
+      <Services />
     </>
   );
 }

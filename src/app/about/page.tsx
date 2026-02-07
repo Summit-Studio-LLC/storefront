@@ -1,54 +1,54 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "About | Summit Studio",
+  title: 'About | Summit Studio',
   description:
-    "Summit Studio is a teaching consultancy in Cookeville, TN. We modernize local businesses with custom software while training the next generation of developers.",
+    'Summit Studio is a teaching consultancy in Cookeville, TN. We modernize local businesses with custom software while training the next generation of developers.',
 };
 
 const modelCards = [
   {
-    title: "Local Businesses",
-    tagline: "Affordable Solutions, Real Results",
+    title: 'Local Businesses',
+    tagline: 'Affordable Solutions, Real Results',
     description:
-      "Custom software at 50% less than big agencies. Transparent pricing, local accountability, outcomes you can measure.",
+      'Custom software at 50% less than big agencies. Transparent pricing, local accountability, outcomes you can measure.',
   },
   {
-    title: "CS Students",
-    tagline: "Real Experience, Real Mentorship",
+    title: 'CS Students',
+    tagline: 'Real Experience, Real Mentorship',
     description:
-      "Tennessee Tech students work on real client projects under senior mentorship. Portfolio pieces, professional workflows, career support.",
+      'Tennessee Tech students work on real client projects under senior mentorship. Portfolio pieces, professional workflows, career support.',
   },
   {
-    title: "Senior Engineers",
-    tagline: "Give Back to Your Community",
+    title: 'Senior Engineers',
+    tagline: 'Give Back to Your Community',
     description:
-      "Experienced remote engineers contribute 2-5 hours/month through mentoring, code review, and optional paid consulting.",
+      'Experienced remote engineers contribute 2-5 hours/month through mentoring, code review, and optional paid consulting.',
   },
 ];
 
 const values = [
   {
-    title: "Outcome-Focused",
+    title: 'Outcome-Focused',
     description:
-      "We measure success by hours saved and errors prevented, not lines of code written.",
+      'We measure success by hours saved and errors prevented, not lines of code written.',
   },
   {
-    title: "Simple & Maintainable",
-    description: "Proven technologies. No over-engineering. Systems that last.",
+    title: 'Simple & Maintainable',
+    description: 'Proven technologies. No over-engineering. Systems that last.',
   },
   {
-    title: "Quality Through Mentorship",
-    description: "Every line of code reviewed by a senior engineer.",
+    title: 'Quality Through Mentorship',
+    description: 'Every line of code reviewed by a senior engineer.',
   },
   {
-    title: "Teaching by Doing",
-    description: "Real projects are the best classroom.",
+    title: 'Teaching by Doing',
+    description: 'Real projects are the best classroom.',
   },
   {
-    title: "Community-First",
-    description: "We build relationships, not just software.",
+    title: 'Community-First',
+    description: 'We build relationships, not just software.',
   },
 ];
 
@@ -63,15 +63,14 @@ export default function AboutPage() {
           </h1>
           <div className="space-y-6 text-lg text-[#4A4A4A] md:text-xl">
             <p>
-              Summit Studio is a teaching consultancy based in Cookeville,
-              Tennessee. We help local businesses replace paper, spreadsheets,
-              and manual workflows with simple, maintainable custom software.
+              Summit Studio is a teaching consultancy based in Cookeville, Tennessee. We help local
+              businesses replace paper, spreadsheets, and manual workflows with simple, maintainable
+              custom software.
             </p>
             <p>
-              We&apos;re not a big agency with layers of project managers and
-              hidden fees. We&apos;re a focused team that understands your
-              business first, then builds exactly what you need — nothing more,
-              nothing less.
+              We&apos;re not a big agency with layers of project managers and hidden fees.
+              We&apos;re a focused team that understands your business first, then builds exactly
+              what you need — nothing more, nothing less.
             </p>
           </div>
         </div>
@@ -89,12 +88,8 @@ export default function AboutPage() {
                 key={card.title}
                 className="rounded-lg border border-[#4A4A4A]/10 bg-[#FAFAF8] p-8"
               >
-                <h3 className="mb-2 text-xl font-bold text-[#2D5F3E]">
-                  {card.title}
-                </h3>
-                <p className="mb-4 text-sm font-semibold text-[#C46A32]">
-                  {card.tagline}
-                </p>
+                <h3 className="mb-2 text-xl font-bold text-[#2D5F3E]">{card.title}</h3>
+                <p className="mb-4 text-sm font-semibold text-[#C46A32]">{card.tagline}</p>
                 <p className="text-[#4A4A4A]">{card.description}</p>
               </div>
             ))}
@@ -115,9 +110,7 @@ export default function AboutPage() {
             </div>
             {/* Bio placeholder */}
             <div className="text-center md:text-left">
-              <p className="text-lg italic text-[#4A4A4A]">
-                [Founder bio to be added]
-              </p>
+              <p className="text-lg italic text-[#4A4A4A]">[Founder bio to be added]</p>
             </div>
           </div>
         </div>
@@ -139,9 +132,7 @@ export default function AboutPage() {
                   {index + 1}
                 </span>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-[#2D5F3E]">
-                    {value.title}
-                  </h3>
+                  <h3 className="mb-1 text-lg font-bold text-[#2D5F3E]">{value.title}</h3>
                   <p className="text-[#4A4A4A]">{value.description}</p>
                 </div>
               </div>

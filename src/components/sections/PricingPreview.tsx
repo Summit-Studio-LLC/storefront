@@ -1,23 +1,23 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const pricingTiers = [
   {
-    problem: "Manual data entry eating 10+ hrs/week",
-    solution: "Custom automation system",
-    price: "$2,500-$5,000",
-    timeline: "6-8 weeks",
+    problem: 'Manual data entry eating 10+ hrs/week',
+    solution: 'Custom automation system',
+    price: '$2,500-$5,000',
+    timeline: '6-8 weeks',
   },
   {
-    problem: "Paper forms and scheduling chaos",
-    solution: "Digital workflow with mobile access",
-    price: "$5,000-$10,000",
-    timeline: "10-12 weeks",
+    problem: 'Paper forms and scheduling chaos',
+    solution: 'Digital workflow with mobile access',
+    price: '$5,000-$10,000',
+    timeline: '10-12 weeks',
   },
   {
-    problem: "Complex process with integrations",
-    solution: "Full platform connecting your tools",
-    price: "$10,000-$20,000",
-    timeline: "14-16 weeks",
+    problem: 'Complex process with integrations',
+    solution: 'Full platform connecting your tools',
+    price: '$10,000-$20,000',
+    timeline: '14-16 weeks',
   },
 ];
 
@@ -50,15 +50,11 @@ export default function PricingPreview() {
                 <div className="flex justify-between">
                   <div>
                     <p className="text-sm text-stone">Price</p>
-                    <p className="text-lg font-bold text-forest">
-                      {tier.price}
-                    </p>
+                    <p className="text-lg font-bold text-forest">{tier.price}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-stone">Timeline</p>
-                    <p className="text-lg font-semibold text-stone">
-                      {tier.timeline}
-                    </p>
+                    <p className="text-lg font-semibold text-stone">{tier.timeline}</p>
                   </div>
                 </div>
               </div>
@@ -69,10 +65,7 @@ export default function PricingPreview() {
           Every project includes training, documentation, and 30-60 day warranty
         </p>
         <div className="mt-6 text-center">
-          <Link
-            href="/services"
-            className="font-medium text-forest underline hover:opacity-80"
-          >
+          <Link href="/services" className="font-medium text-forest underline hover:opacity-80">
             View full pricing details
           </Link>
         </div>

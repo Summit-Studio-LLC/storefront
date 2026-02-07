@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function BottomCTA() {
   return (
@@ -13,9 +13,7 @@ export default function BottomCTA() {
         >
           Schedule Free Consultation
         </Link>
-        <p className="text-white/80">
-          30 minutes. No cost. No pressure. Just answers.
-        </p>
+        <p className="text-white/80">30 minutes. No cost. No pressure. Just answers.</p>
       </div>
     </section>
   );

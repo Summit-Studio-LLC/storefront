@@ -5,9 +5,7 @@ export default function LocalTrust() {
         <p className="mb-2 text-2xl font-semibold text-forest md:text-3xl">
           Based in Cookeville, Tennessee
         </p>
-        <p className="text-lg text-stone">
-          Serving local businesses across the Upper Cumberland
-        </p>
+        <p className="text-lg text-stone">Serving local businesses across the Upper Cumberland</p>
       </div>
     </section>
   );

@@ -9,10 +9,7 @@ interface ComparisonTableProps {
   rows: ComparisonRow[];
 }
 
-export default function ComparisonTable({
-  competitorName,
-  rows,
-}: ComparisonTableProps) {
+export default function ComparisonTable({ competitorName, rows }: ComparisonTableProps) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
@@ -32,13 +29,9 @@ export default function ComparisonTable({
         <tbody>
           {rows.map((row, index) => (
             <tr key={index} className="border-b border-[#4A4A4A]/10">
-              <td className="p-4 text-sm font-medium text-[#4A4A4A]">
-                {row.feature}
-              </td>
+              <td className="p-4 text-sm font-medium text-[#4A4A4A]">{row.feature}</td>
               <td className="p-4 text-sm text-[#4A4A4A]">{row.competitor}</td>
-              <td className="bg-[#2D5F3E]/5 p-4 text-sm text-[#2D5F3E]">
-                {row.summit}
-              </td>
+              <td className="bg-[#2D5F3E]/5 p-4 text-sm text-[#2D5F3E]">{row.summit}</td>
             </tr>
           ))}
         </tbody>

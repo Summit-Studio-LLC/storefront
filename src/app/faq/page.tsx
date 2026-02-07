@@ -66,9 +66,7 @@ export default function FAQPage() {
       {/* CTA Section */}
       <section className="bg-[#FAFAF8] px-4 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">
-            Didn&apos;t find your answer?
-          </h2>
+          <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">Didn&apos;t find your answer?</h2>
           <p className="mb-6 text-[#4A4A4A]">
             We&apos;re happy to answer any questions. Schedule a free consultation or send us a
             message.

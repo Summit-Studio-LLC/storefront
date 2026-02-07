@@ -1,124 +1,121 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import ComparisonTable from "@/components/ui/ComparisonTable";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import ComparisonTable from '@/components/ui/ComparisonTable';
 
 export const metadata: Metadata = {
-  title: "Why Summit Studio | Local, Affordable, Transparent",
+  title: 'Why Summit Studio | Local, Affordable, Transparent',
   description:
-    "50% less than big agencies. Transparent pricing. Outcome-focused. See why Tennessee businesses choose Summit Studio for custom software.",
+    '50% less than big agencies. Transparent pricing. Outcome-focused. See why Tennessee businesses choose Summit Studio for custom software.',
 };
 
 const agencyComparison = [
   {
-    feature: "Pricing",
+    feature: 'Pricing',
     competitor: 'Hidden, "contact for quote"',
-    summit: "Published, transparent, fixed-price",
+    summit: 'Published, transparent, fixed-price',
   },
   {
-    feature: "Cost",
-    competitor: "$100-200/hr, unclear total",
-    summit: "50% less, milestone payments",
+    feature: 'Cost',
+    competitor: '$100-200/hr, unclear total',
+    summit: '50% less, milestone payments',
   },
   {
-    feature: "Focus",
-    competitor: "Technology and process",
-    summit: "Your outcomes and results",
+    feature: 'Focus',
+    competitor: 'Technology and process',
+    summit: 'Your outcomes and results',
   },
   {
-    feature: "Communication",
-    competitor: "Layers of project managers",
-    summit: "Direct access to who builds it",
+    feature: 'Communication',
+    competitor: 'Layers of project managers',
+    summit: 'Direct access to who builds it',
   },
   {
-    feature: "Sales cycle",
-    competitor: "Long RFPs, weeks of meetings",
-    summit: "Quick consultation → proposal → start",
+    feature: 'Sales cycle',
+    competitor: 'Long RFPs, weeks of meetings',
+    summit: 'Quick consultation → proposal → start',
   },
   {
-    feature: "Warranty",
-    competitor: "Varies",
-    summit: "30-60 days on everything",
+    feature: 'Warranty',
+    competitor: 'Varies',
+    summit: '30-60 days on everything',
   },
 ];
 
 const freelancerComparison = [
   {
-    feature: "Reliability",
-    competitor: "Solo, limited capacity",
-    summit: "Structured process, backup capacity",
+    feature: 'Reliability',
+    competitor: 'Solo, limited capacity',
+    summit: 'Structured process, backup capacity',
   },
   {
-    feature: "Pricing",
-    competitor: "Hourly, unpredictable total",
-    summit: "Fixed-price, clear milestones",
+    feature: 'Pricing',
+    competitor: 'Hourly, unpredictable total',
+    summit: 'Fixed-price, clear milestones',
   },
   {
-    feature: "Quality",
-    competitor: "Varies widely",
-    summit: "Every PR reviewed by senior engineer",
+    feature: 'Quality',
+    competitor: 'Varies widely',
+    summit: 'Every PR reviewed by senior engineer',
   },
   {
-    feature: "Support",
-    competitor: "Often disappears after delivery",
-    summit: "Retainer options, ongoing partnership",
+    feature: 'Support',
+    competitor: 'Often disappears after delivery',
+    summit: 'Retainer options, ongoing partnership',
   },
   {
-    feature: "Process",
-    competitor: "Ad-hoc",
-    summit: "Documented, repeatable, professional",
+    feature: 'Process',
+    competitor: 'Ad-hoc',
+    summit: 'Documented, repeatable, professional',
   },
 ];
 
 const diyComparison = [
   {
-    feature: "Fit",
+    feature: 'Fit',
     competitor: "Generic, doesn't fit your process",
-    summit: "Custom-built for exactly how you work",
+    summit: 'Custom-built for exactly how you work',
   },
   {
-    feature: "Cost Model",
-    competitor: "Monthly SaaS fees forever",
-    summit: "You own it, no recurring platform cost",
+    feature: 'Cost Model',
+    competitor: 'Monthly SaaS fees forever',
+    summit: 'You own it, no recurring platform cost',
   },
   {
-    feature: "Scalability",
-    competitor: "Limited by their features",
-    summit: "Scales with your business",
+    feature: 'Scalability',
+    competitor: 'Limited by their features',
+    summit: 'Scales with your business',
   },
   {
-    feature: "Support",
-    competitor: "You figure it out alone",
-    summit: "Training and ongoing support included",
+    feature: 'Support',
+    competitor: 'You figure it out alone',
+    summit: 'Training and ongoing support included',
   },
 ];
 
 const differentiators = [
   {
-    title: "Transparent Pricing",
-    description: "Published rates. No surprises. Fixed-price projects.",
+    title: 'Transparent Pricing',
+    description: 'Published rates. No surprises. Fixed-price projects.',
   },
   {
-    title: "Outcome-Focused",
-    description:
-      "We measure in hours saved and errors prevented. Not features shipped.",
+    title: 'Outcome-Focused',
+    description: 'We measure in hours saved and errors prevented. Not features shipped.',
   },
   {
-    title: "Local Accountability",
-    description:
-      "Based in Cookeville. We're your neighbor, not a faceless agency.",
+    title: 'Local Accountability',
+    description: "Based in Cookeville. We're your neighbor, not a faceless agency.",
   },
   {
-    title: "Milestone Payments",
-    description: "See progress before paying more. 30/30/40 split.",
+    title: 'Milestone Payments',
+    description: 'See progress before paying more. 30/30/40 split.',
   },
   {
-    title: "30-60 Day Warranty",
-    description: "If something breaks, we fix it. No extra charge.",
+    title: '30-60 Day Warranty',
+    description: 'If something breaks, we fix it. No extra charge.',
   },
   {
-    title: "Training Included",
-    description:
-      "We don't just build it and leave. Your team knows how to use it.",
+    title: 'Training Included',
+    description: "We don't just build it and leave. Your team knows how to use it.",
   },
 ];
 
@@ -132,8 +129,7 @@ export default function WhyUsPage() {
             Not Another Tech Company
           </h1>
           <p className="text-xl text-[#4A4A4A] md:text-2xl">
-            We focus on your problems, not our tech stack. Here&apos;s why that
-            matters.
+            We focus on your problems, not our tech stack. Here&apos;s why that matters.
           </p>
         </div>
       </section>
@@ -147,10 +143,7 @@ export default function WhyUsPage() {
           <p className="mb-10 text-center text-[#4A4A4A]">
             Get the quality without the overhead and opaque pricing.
           </p>
-          <ComparisonTable
-            competitorName="Big Agencies"
-            rows={agencyComparison}
-          />
+          <ComparisonTable competitorName="Big Agencies" rows={agencyComparison} />
         </div>
       </section>
 
@@ -163,10 +156,7 @@ export default function WhyUsPage() {
           <p className="mb-10 text-center text-[#4A4A4A]">
             Get the flexibility with real process and quality assurance.
           </p>
-          <ComparisonTable
-            competitorName="Freelancers"
-            rows={freelancerComparison}
-          />
+          <ComparisonTable competitorName="Freelancers" rows={freelancerComparison} />
         </div>
       </section>
 
@@ -179,10 +169,7 @@ export default function WhyUsPage() {
           <p className="mb-10 text-center text-[#4A4A4A]">
             Get software that fits your business, not the other way around.
           </p>
-          <ComparisonTable
-            competitorName="DIY / Off-the-Shelf"
-            rows={diyComparison}
-          />
+          <ComparisonTable competitorName="DIY / Off-the-Shelf" rows={diyComparison} />
         </div>
       </section>
 
@@ -194,13 +181,8 @@ export default function WhyUsPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {differentiators.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-lg border border-[#2D5F3E]/20 bg-white p-6"
-              >
-                <h3 className="mb-2 text-lg font-bold text-[#2D5F3E]">
-                  {item.title}
-                </h3>
+              <div key={item.title} className="rounded-lg border border-[#2D5F3E]/20 bg-white p-6">
+                <h3 className="mb-2 text-lg font-bold text-[#2D5F3E]">{item.title}</h3>
                 <p className="text-[#4A4A4A]">{item.description}</p>
               </div>
             ))}

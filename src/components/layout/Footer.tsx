@@ -1,57 +1,37 @@
 import Link from 'next/link';
-import { navLinks } from '@/data/navigation';
 import { siteConfig } from '@/data/site';
-
-const legalLinks = [
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Service', href: '/terms' },
-];
-
-const socialLinks = [
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Twitter', href: '#' },
-];
+import { footerLinks } from '@/data/navigation';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-gray-300">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
-        {/* Main Footer Content */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Company Info */}
+    <footer className="bg-offwhite border-t border-gray-200 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          {/* Brand */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              {siteConfig.name}
-            </h3>
-            <p className="mb-4 text-sm leading-relaxed">
-              {siteConfig.tagline}
-            </p>
-            <p className="text-sm text-gray-400">
-              {siteConfig.location}
+            <div className="flex items-center gap-2 text-forest mb-4">
+              <span className="material-symbols-outlined" aria-hidden="true">
+                landscape
+              </span>
+              <span className="font-bold text-lg">{siteConfig.name}</span>
+            </div>
+            <p className="text-stone text-sm leading-relaxed">
+              Helping businesses reach their peak potential through intelligent automation and
+              design.
             </p>
           </div>
 
-          {/* Pages */}
+          {/* Company */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Pages
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-sm transition-colors hover:text-white"
-                >
-                  Home
-                </Link>
-              </li>
-              {navLinks.map((link) => (
-                <li key={link.href}>
+            <h4 className="font-bold text-forest mb-4">Company</h4>
+            <ul className="flex flex-col gap-2">
+              {footerLinks.company.map((link) => (
+                <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-stone hover:text-accent text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -60,30 +40,18 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Resources */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Connect
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-sm transition-colors hover:text-white"
-                >
-                  {siteConfig.email}
-                </a>
-              </li>
-              {socialLinks.map((link) => (
+            <h4 className="font-bold text-forest mb-4">Resources</h4>
+            <ul className="flex flex-col gap-2">
+              {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    className="text-stone hover:text-accent text-sm transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -91,15 +59,13 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Legal
-            </h3>
-            <ul className="space-y-2">
-              {legalLinks.map((link) => (
-                <li key={link.href}>
+            <h4 className="font-bold text-forest mb-4">Legal</h4>
+            <ul className="flex flex-col gap-2">
+              {footerLinks.legal.map((link) => (
+                <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-stone hover:text-accent text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -110,10 +76,30 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-center text-sm text-gray-400">
-            &copy; {currentYear} {siteConfig.name}. {siteConfig.location}.
+        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-stone text-sm">
+            &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>
+          <div className="flex gap-4">
+            <button
+              type="button"
+              className="text-stone hover:text-forest transition-colors"
+              aria-label="Share"
+            >
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                share
+              </span>
+            </button>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="text-stone hover:text-forest transition-colors"
+            >
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                mail
+              </span>
+              <span className="sr-only">Email us</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

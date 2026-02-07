@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
 interface FormData {
   name: string;
@@ -65,9 +65,7 @@ export function ContactForm() {
       <div className="rounded-lg border border-[#2D5F3E]/20 bg-[#2D5F3E]/5 p-8 text-center">
         <div className="mb-4 text-4xl">&#10003;</div>
         <h3 className="mb-2 text-xl font-bold text-[#2D5F3E]">Message Sent!</h3>
-        <p className="text-[#4A4A4A]">
-          Thanks! We&apos;ll get back to you within 1 business day.
-        </p>
+        <p className="text-[#4A4A4A]">Thanks! We&apos;ll get back to you within 1 business day.</p>
       </div>
     );
   }
