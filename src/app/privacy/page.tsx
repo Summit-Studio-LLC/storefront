@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
@@ -9,139 +10,298 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-[#FAFAF8]">
-      <div className="mx-auto max-w-3xl px-4 py-20 md:py-28">
-        <h1 className="mb-8 text-4xl font-bold text-[#2D5F3E] md:text-5xl">Privacy Policy</h1>
+    <article className="mx-auto w-full max-w-[42rem] px-6 pb-24">
+      {/* Header */}
+      <header className="mb-12 border-b border-forest/10 pb-10 pt-10">
+        <h1 className="mb-4 text-5xl font-bold tracking-tight text-forest">Privacy Policy</h1>
+        <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+          <span className="material-symbols-outlined text-base" aria-hidden="true">
+            schedule
+          </span>
+          Last Updated: February 2026
+        </p>
+      </header>
 
-        <div className="prose prose-lg max-w-none text-[#4A4A4A]">
-          <p className="lead mb-8 text-lg">
-            At {siteConfig.name}, we take your privacy seriously. This policy explains how we
-            collect, use, and protect your information when you use our website and services.
+      {/* Introduction */}
+      <div className="max-w-none">
+        <p className="mb-8 text-lg leading-relaxed text-stone">
+          At <span className="font-semibold text-forest">{siteConfig.name}</span>, we take your
+          privacy seriously. This policy explains how we collect, use, and protect your information
+          when you use our website and services.
+        </p>
+
+        {/* Section 1 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">01.</span>
+            Information We Collect
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">
+            We collect information that you provide directly to us, including:
           </p>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">1. Information We Collect</h2>
-            <p className="mb-4">
-              We collect information that you provide directly to us, including:
-            </p>
-            <ul className="mb-4 list-inside list-disc space-y-2">
-              <li>
-                <strong>Contact form submissions:</strong> Name, email address, company name, and
-                any additional information you choose to share about your business needs.
-              </li>
-              <li>
-                <strong>Consultation scheduling:</strong> Information provided when booking a
-                consultation through our scheduling system.
-              </li>
-              <li>
-                <strong>Communications:</strong> Records of correspondence when you contact us via
-                email or other channels.
-              </li>
-            </ul>
-            <p>
-              We also automatically collect certain information when you visit our website,
-              including your IP address, browser type, pages visited, and time spent on our site.
-              This information is collected through analytics services to help us improve our
-              website.
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">
-              2. How We Use Your Information
-            </h2>
-            <p className="mb-4">We use the information we collect to:</p>
-            <ul className="list-inside list-disc space-y-2">
-              <li>Respond to your inquiries and provide requested services</li>
-              <li>Schedule and conduct consultations</li>
-              <li>Send you information about our services (only with your consent)</li>
-              <li>Improve our website and services based on usage patterns</li>
-              <li>Comply with legal obligations</li>
-            </ul>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">3. Third-Party Services</h2>
-            <p className="mb-4">
-              We use the following third-party services that may collect information:
-            </p>
-            <ul className="list-inside list-disc space-y-2">
-              <li>
-                <strong>Calendly:</strong> For scheduling consultations. Calendly has its own
-                privacy policy governing how they handle your information.
-              </li>
-              <li>
-                <strong>Analytics services:</strong> To understand how visitors use our website.
-                This data is anonymized and aggregated.
-              </li>
-            </ul>
-            <p className="mt-4">
-              We do not sell, rent, or share your personal information with third parties for their
-              marketing purposes.
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">4. Cookies</h2>
-            <p>
-              Our website uses minimal cookies, primarily for analytics purposes. These cookies help
-              us understand how visitors interact with our site so we can improve the experience.
-              You can configure your browser to refuse cookies, though this may affect some website
-              functionality.
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">5. Data Retention</h2>
-            <p>
-              We retain your personal information for as long as necessary to provide services and
-              fulfill the purposes described in this policy. Contact form submissions and
-              consultation records are retained for business purposes and to maintain our
-              relationship with you. You may request deletion of your data at any time.
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">6. Your Rights</h2>
-            <p className="mb-4">You have the right to:</p>
-            <ul className="list-inside list-disc space-y-2">
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate information</li>
-              <li>Request deletion of your personal information</li>
-              <li>Opt out of marketing communications</li>
-              <li>Withdraw consent where applicable</li>
-            </ul>
-            <p className="mt-4">
-              To exercise any of these rights, please contact us using the information below.
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-[#2D5F3E]">7. Contact Us</h2>
-            <p>
-              If you have questions about this privacy policy or how we handle your information,
-              please contact us at{' '}
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-[#2D5F3E] underline hover:no-underline"
+          <ul className="mb-4 list-none space-y-3 pl-0">
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
               >
-                {siteConfig.email}
-              </a>
-              .
-            </p>
-          </section>
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Contact form submissions:</strong> Name, email
+                address, company name, and any additional information you choose to share about your
+                business needs.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Consultation scheduling:</strong> Information
+                provided when booking a consultation through our scheduling system.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Communications:</strong> Records of correspondence
+                when you contact us via email or other channels.
+              </span>
+            </li>
+          </ul>
+          <p className="leading-relaxed text-stone">
+            We also automatically collect certain information when you visit our website, including
+            your IP address, browser type, pages visited, and time spent on our site. This
+            information is collected through analytics services to help us improve our website.
+          </p>
+        </section>
 
-          <section className="rounded-lg border border-[#4A4A4A]/10 bg-white p-6">
-            <p className="text-sm text-[#4A4A4A]/70">
-              <strong>Last Updated:</strong> February 2026
+        {/* Section 2 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">02.</span>
+            How We Use Your Information
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">We use the information we collect to:</p>
+          <ul className="mb-4 list-none space-y-3 pl-0">
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Respond to your inquiries and provide requested services
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Schedule and conduct consultations</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Send you information about our services (only with your consent)
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Improve our website and services based on usage patterns
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Comply with legal obligations</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Section 3 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">03.</span>
+            Third-Party Services
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">
+            We use the following third-party services that may collect information:
+          </p>
+          <ul className="mb-4 list-none space-y-3 pl-0">
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Calendly:</strong> For scheduling consultations.
+                Calendly has its own privacy policy governing how they handle your information.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Analytics services:</strong> To understand how
+                visitors use our website. This data is anonymized and aggregated.
+              </span>
+            </li>
+          </ul>
+          <p className="leading-relaxed text-stone">
+            We do not sell, rent, or share your personal information with third parties for their
+            marketing purposes.
+          </p>
+        </section>
+
+        {/* Section 4 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">04.</span>
+            Cookies
+          </h3>
+          <p className="leading-relaxed text-stone">
+            Our website uses minimal cookies, primarily for analytics purposes. These cookies help
+            us understand how visitors interact with our site so we can improve the experience. You
+            can configure your browser to refuse cookies, though this may affect some website
+            functionality.
+          </p>
+        </section>
+
+        {/* Section 5 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">05.</span>
+            Data Security
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">
+            We take reasonable measures to help protect information about you from loss, theft,
+            misuse and unauthorized access, disclosure, alteration and destruction. All sensitive
+            data is encrypted using industry-standard protocols (SSL/TLS).
+          </p>
+          <div className="rounded-xl border border-forest/10 bg-forest/5 p-6">
+            <p className="text-sm italic text-stone">
+              &ldquo;While we strive to use commercially acceptable means to protect your Personal
+              Data, we cannot guarantee its absolute security.&rdquo;
             </p>
-            <p className="mt-2 text-sm text-[#4A4A4A]/70">
-              We may update this privacy policy from time to time. Any changes will be posted on
-              this page with an updated revision date.
-            </p>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        {/* Section 6 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">06.</span>
+            Your Rights
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">You have the right to:</p>
+          <ul className="mb-4 list-none space-y-3 pl-0">
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Access the personal information we hold about you</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Request correction of inaccurate information</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Request deletion of your personal information</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">Opt out of marketing communications</span>
+            </li>
+          </ul>
+          <p className="leading-relaxed text-stone">
+            To exercise any of these rights, please contact us using the information below.
+          </p>
+        </section>
+
+        {/* Section 7 */}
+        <section className="mb-12">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">07.</span>
+            Contact Us
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">
+            If you have questions about this Privacy Policy, please contact us by email:
+          </p>
+          <a
+            href="mailto:legal@summitstudio.dev"
+            className="inline-flex items-center gap-2 font-bold text-forest"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">
+              mail
+            </span>
+            <span className="underline-center">legal@summitstudio.dev</span>
+          </a>
+        </section>
       </div>
-    </main>
+
+      {/* Bottom Bar */}
+      <div className="mt-8 flex items-center justify-between border-t border-forest/10 pt-8">
+        <span className="text-sm text-muted-foreground">Have more questions?</span>
+        <Link
+          href="/contact"
+          className="text-sm font-semibold text-forest transition-colors hover:text-accent"
+        >
+          Contact Us
+        </Link>
+      </div>
+    </article>
   );
 }

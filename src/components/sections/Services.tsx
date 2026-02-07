@@ -19,7 +19,7 @@ export default function Services() {
             className="hidden md:flex items-center gap-1 text-forest font-bold hover:text-accent"
           >
             See all services
-            <span className="material-symbols-outlined text-[18px] mt-1" aria-hidden="true">
+            <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
               arrow_right_alt
             </span>
           </Link>
