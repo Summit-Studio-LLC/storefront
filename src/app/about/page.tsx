@@ -74,7 +74,7 @@ const founderSections = [
   },
   {
     label: 'The Local',
-    text: "I moved to Cookeville to be close to family. My wife grew up here — we built our house on her family's ranch and we're raising our kids where they can see their grandparents. I chose this community, and Summit Studio is my way of investing in it. The businesses here deserve the same quality of software that companies in big cities get, without the big-city price tag or the big-city runaround.",
+    text: "I moved to Cookeville to be close to family. My wife grew up here — we built our house on her family's ranch and we're raising our 3 kids where they can see their grandparents. I chose this community, and Summit Studio is my way of investing in it. The businesses here deserve the same quality of software that companies in big cities get, without the big-city price tag or the big-city runaround.",
   },
 ];
 

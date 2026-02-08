@@ -7,6 +7,7 @@ import { navLinks, ctaLink } from '@/data/navigation';
 import { siteConfig } from '@/data/site';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { Logo } from '@/components/ui/Logo';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -49,11 +50,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 text-forest group">
-          <div className="size-8 flex items-center justify-center">
-            <span className="material-symbols-outlined text-[32px]" aria-hidden="true">
-              landscape
-            </span>
-          </div>
+          <Logo />
           <span className="text-forest text-xl font-bold tracking-tight">{siteConfig.name}</span>
         </Link>
 

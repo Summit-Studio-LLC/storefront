@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { siteConfig } from '@/data/site';
 import { footerLinks } from '@/data/navigation';
 import { EmailLink } from '@/components/ui/EmailLink';
+import { Logo } from '@/components/ui/Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,9 +14,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 text-forest mb-4">
-              <span className="material-symbols-outlined" aria-hidden="true">
-                landscape
-              </span>
+              <Logo className="size-6" />
               <span className="font-bold text-lg">{siteConfig.name}</span>
             </div>
             <p className="text-stone text-sm leading-relaxed mb-4">
