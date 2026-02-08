@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: 'Summit Studio <onboarding@resend.dev>',
+      from: 'Summit Studio <contact@summitstudio.dev>',
       to: 'contact@summitstudio.dev',
       subject: `New Contact Form: ${name} from ${company || 'N/A'}`,
       replyTo: email,

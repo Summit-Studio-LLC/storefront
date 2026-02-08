@@ -1,7 +1,7 @@
 export const navLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Process', href: '/process' },
-  { label: 'Case Studies', href: '#' },
+  { label: 'Case Studies', href: '/case-studies' },
   { label: 'About', href: '/about' },
 ];
 
@@ -14,7 +14,7 @@ export const footerLinks = {
   ],
   resources: [
     { label: 'Blog', href: '#' },
-    { label: 'Case Studies', href: '#' },
+    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Support', href: '#' },
   ],
   legal: [

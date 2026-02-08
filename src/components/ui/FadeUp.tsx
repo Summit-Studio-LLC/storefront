@@ -7,7 +7,7 @@ export function FadeUp({
   children,
   className,
   delay = 0,
-  threshold = 0.6,
+  threshold = 0.85,
 }: {
   children: React.ReactNode;
   className?: string;

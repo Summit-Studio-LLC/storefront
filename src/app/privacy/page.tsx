@@ -278,8 +278,8 @@ export default function PrivacyPage() {
             Contact Us
           </h3>
           <p className="mb-6 leading-relaxed text-stone">
-            If you have questions about this Privacy Policy or how we handle your information, please
-            reach out.
+            If you have questions about this Privacy Policy or how we handle your information,
+            please reach out.
           </p>
           <a
             href="mailto:legal@summitstudio.dev"

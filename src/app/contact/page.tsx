@@ -76,9 +76,9 @@ export default function ContactPage() {
       </section>
 
       {/* Calendly Section */}
-      <section className="border-t border-stone/10 bg-offwhite px-4 py-20 md:px-10 lg:px-40">
+      <section className="border-t border-stone/10 px-4 py-16 md:px-10 md:py-20 lg:px-40">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center">
-          <div className="mb-10 max-w-2xl text-center">
+          <div className="mb-8 max-w-2xl text-center">
             <h2 className="mb-4 font-serif text-4xl text-forest md:text-5xl">
               Book Your Discovery Call
             </h2>
@@ -86,7 +86,7 @@ export default function ContactPage() {
               Pick a time that works for you to discuss your project
             </p>
           </div>
-          <div className="w-full max-w-4xl overflow-hidden rounded-xl border border-stone/10 bg-white shadow-sm">
+          <div className="w-full max-w-4xl">
             <CalendlyEmbed />
           </div>
         </div>

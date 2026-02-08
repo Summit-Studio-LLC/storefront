@@ -67,7 +67,7 @@ export default function Hero() {
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>
-            <Link href="#">View Case Studies</Link>
+            <Link href="/case-studies">View Case Studies</Link>
           </Button>
         </div>
       </div>
