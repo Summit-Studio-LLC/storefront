@@ -195,7 +195,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease;
 }
 
-.underline-center:hover::after {
+.underline-center:hover::after,
+.group:hover .underline-center::after {
   transform: scaleX(1);
 }
 

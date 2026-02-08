@@ -12,7 +12,8 @@ export default function Services() {
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">Our Services</h2>
             <p className="text-stone text-lg">
-              Comprehensive solutions designed to elevate your digital ecosystem to new heights.
+              We build software that replaces manual work, connects your tools, and brings new ideas
+              to life.
             </p>
           </div>
           <Link

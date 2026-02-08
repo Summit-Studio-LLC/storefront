@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteConfig } from '@/data/site';
 import { footerLinks } from '@/data/navigation';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,17 +18,18 @@ export function Footer() {
               </span>
               <span className="font-bold text-lg">{siteConfig.name}</span>
             </div>
-            <p className="text-stone text-sm leading-relaxed">
-              Helping businesses reach their peak potential through intelligent automation and
-              design.
+            <p className="text-stone text-sm leading-relaxed mb-4">
+              Custom software for small businesses tired of manual work. Based in{' '}
+              {siteConfig.location}.
             </p>
+            <EmailLink email={siteConfig.email} size="sm" />
           </div>
 
-          {/* Company */}
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-forest mb-4">Company</h4>
+            <h4 className="font-bold text-forest mb-4">Services</h4>
             <ul className="flex flex-col gap-2">
-              {footerLinks.company.map((link) => (
+              {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -40,11 +42,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company */}
           <div>
-            <h4 className="font-bold text-forest mb-4">Resources</h4>
+            <h4 className="font-bold text-forest mb-4">Company</h4>
             <ul className="flex flex-col gap-2">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -76,30 +78,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-stone text-sm">
+        <div className="border-t border-gray-200 pt-8">
+          <p className="text-stone text-sm text-center">
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <button
-              type="button"
-              className="text-stone hover:text-forest transition-colors"
-              aria-label="Share"
-            >
-              <span className="material-symbols-outlined text-xl" aria-hidden="true">
-                share
-              </span>
-            </button>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-stone hover:text-forest transition-colors"
-            >
-              <span className="material-symbols-outlined text-xl" aria-hidden="true">
-                mail
-              </span>
-              <span className="sr-only">Email us</span>
-            </a>
-          </div>
         </div>
       </div>
     </footer>

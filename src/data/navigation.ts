@@ -8,14 +8,14 @@ export const navLinks = [
 export const ctaLink = { label: 'Schedule a Conversation', href: '/contact' };
 
 export const footerLinks = {
-  company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-  ],
-  resources: [
-    { label: 'Blog', href: '#' },
+  services: [
+    { label: 'Services', href: '/services' },
+    { label: 'Process', href: '/process' },
     { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Support', href: '#' },
+  ],
+  company: [
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },

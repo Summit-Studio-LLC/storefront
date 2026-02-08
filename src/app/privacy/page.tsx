@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { siteConfig } from '@/data/site';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -281,22 +282,7 @@ export default function PrivacyPage() {
             If you have questions about this Privacy Policy or how we handle your information,
             please reach out.
           </p>
-          <a
-            href="mailto:legal@summitstudio.dev"
-            className="group inline-flex items-center gap-4 rounded-xl border border-forest/10 bg-forest/5 p-5 transition-all hover:border-accent/30 hover:shadow-sm"
-          >
-            <div className="flex size-10 items-center justify-center rounded-lg bg-white text-forest shadow-sm transition-colors group-hover:bg-accent group-hover:text-white">
-              <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-                mail
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Email Us
-              </span>
-              <span className="underline-center font-bold text-forest">legal@summitstudio.dev</span>
-            </div>
-          </a>
+          <EmailLink email="legal@summitstudio.dev" label="Email Us" />
         </section>
       </div>
 

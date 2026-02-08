@@ -12,10 +12,10 @@ export const landingServices = [
       "Visualize your data with bespoke admin panels designed for clarity, giving you a bird's-eye view of your business.",
   },
   {
-    icon: 'hub',
-    title: 'System Integration',
+    icon: 'rocket_launch',
+    title: 'New Product Ideas',
     description:
-      'Connect your favorite tools into one unified, efficient ecosystem. No more data silos or disconnected processes.',
+      "Have an idea for a tool or app? We turn it into real software — built to scale from day one, not a prototype you'll throw away.",
   },
 ];
 
