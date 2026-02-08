@@ -6,7 +6,10 @@ import { siteConfig } from '@/data/site';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Schedule a free 30-minute consultation or send us a message. Summit Studio — custom software for local businesses in Cookeville, TN.',
+    'Schedule a free 30-minute consultation with Summit Studio. Custom software for small businesses in Cookeville, TN and the Upper Cumberland region. No obligation, straight answers.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

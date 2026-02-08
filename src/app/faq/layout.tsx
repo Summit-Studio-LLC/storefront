@@ -1,11 +1,36 @@
 import type { Metadata } from 'next';
+import { getFAQPageSchema, getBreadcrumbSchema } from '@/lib/schema';
+import { faqCategories } from '@/data/faq';
 
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'Common questions about custom software, pricing, timelines, and working with Summit Studio. Transparent answers, no jargon.',
+    'FAQ about custom software development in Cookeville, TN. Pricing, timelines, process, and support. Transparent answers from Summit Studio.',
+  alternates: {
+    canonical: '/faq',
+  },
 };
 
+const faqSchema = getFAQPageSchema(faqCategories);
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://www.summitstudio.dev' },
+  { name: 'FAQ', url: 'https://www.summitstudio.dev/faq' },
+]);
+
 export default function FAQLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  );
 }

@@ -7,17 +7,38 @@ import {
   optimizeServices,
   greenfieldServices,
   outcomePoints,
+  solutions,
 } from '@/data/services';
+import { getServiceSchemas, getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Custom software for small businesses tired of wasting time on admin work. We build automation tools, scheduling systems, and dashboards.',
+    'Custom software for small businesses in Cookeville, TN. Workflow automation, scheduling, dashboards, and client portals. Fixed pricing from $2,500.',
+  alternates: {
+    canonical: '/services',
+  },
 };
+
+const serviceSchema = getServiceSchemas(solutions);
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://www.summitstudio.dev' },
+  { name: 'Services', url: 'https://www.summitstudio.dev/services' },
+]);
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       {/* Option A alt: "Your business, at peak performance" / "Boutique design and development for business automation" */}
       <section className="relative px-6 lg:px-8 min-h-[60vh] flex items-center justify-center overflow-hidden">

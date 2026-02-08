@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     'Privacy policy for Summit Studio. Learn how we collect, use, and protect your information.',
+  alternates: {
+    canonical: '/privacy',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {

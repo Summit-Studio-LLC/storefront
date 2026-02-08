@@ -6,7 +6,10 @@ import { FadeUp } from '@/components/ui/FadeUp';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Summit Studio is a teaching consultancy in Cookeville, TN. We modernize local businesses with custom software while training the next generation of developers.',
+    'Summit Studio is a software consultancy in Cookeville, TN. We build custom software for local businesses while mentoring the next generation of developers.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 const modelCards = [

@@ -3,6 +3,7 @@ import { Manrope, Instrument_Serif } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/data/site';
+import { getLocalBusinessSchema, getOrganizationSchema } from '@/lib/schema';
 import './globals.css';
 
 const manrope = Manrope({
@@ -26,6 +27,17 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -41,6 +53,9 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = getOrganizationSchema();
+const localBusinessSchema = getLocalBusinessSchema();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +69,16 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
       <body className={`${manrope.variable} ${instrumentSerif.variable} antialiased`}>

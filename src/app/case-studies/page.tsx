@@ -1,15 +1,24 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { caseStudies } from '@/data/caseStudies';
+import { getBreadcrumbSchema } from '@/lib/schema';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
-    'See how we help businesses replace manual processes with custom software that saves time, reduces errors, and generates revenue.',
+    'See how Summit Studio helps Cookeville, TN businesses replace manual processes with custom software. Real results: time saved, errors eliminated, revenue generated.',
+  alternates: {
+    canonical: '/case-studies',
+  },
 };
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://www.summitstudio.dev' },
+  { name: 'Case Studies', url: 'https://www.summitstudio.dev/case-studies' },
+]);
 
 const statIcons: Record<string, string> = {
   'Time saved': 'timer',
@@ -20,6 +29,11 @@ const statIcons: Record<string, string> = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-stone/5">
         <div className="absolute inset-0 bg-topography-lines opacity-40 pointer-events-none" />

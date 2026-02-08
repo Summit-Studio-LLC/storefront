@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { navLinks, ctaLink } from '@/data/navigation';
-import { siteConfig } from '@/data/site';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/Logo';
+import { ctaLink, navLinks } from '@/data/navigation';
+import { siteConfig } from '@/data/site';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

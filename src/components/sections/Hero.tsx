@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { ParallaxBg } from '@/components/ui/ParallaxBg';
+import Link from 'next/link';
 
 export default function Hero() {
   return (

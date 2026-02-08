@@ -3,17 +3,42 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { caseStudies } from '@/data/caseStudies';
+import { getArticleSchema, getBreadcrumbSchema } from '@/lib/schema';
 
 const study = caseStudies[0];
 
 export const metadata: Metadata = {
   title: `${study.title} | Case Study`,
-  description: study.subtitle,
+  description: `Case study: ${study.subtitle} See how Summit Studio built a custom platform in under 3 weeks for a Cookeville, TN business.`,
+  alternates: {
+    canonical: `/case-studies/${study.slug}`,
+  },
 };
+
+const articleSchema = getArticleSchema({
+  title: study.title,
+  description: study.subtitle,
+  url: `https://www.summitstudio.dev/case-studies/${study.slug}`,
+});
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://www.summitstudio.dev' },
+  { name: 'Case Studies', url: 'https://www.summitstudio.dev/case-studies' },
+  { name: study.title, url: `https://www.summitstudio.dev/case-studies/${study.slug}` },
+]);
 
 export default function LeagueHandicapPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD from trusted data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-topography-lines opacity-40 pointer-events-none" />

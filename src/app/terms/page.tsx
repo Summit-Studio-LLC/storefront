@@ -6,6 +6,13 @@ import { EmailLink } from '@/components/ui/EmailLink';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of service for Summit Studio website and services.',
+  alternates: {
+    canonical: '/terms',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {

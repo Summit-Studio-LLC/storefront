@@ -5,7 +5,10 @@ import ComparisonTable from '@/components/ui/ComparisonTable';
 export const metadata: Metadata = {
   title: 'Why Summit Studio | Local, Affordable, Transparent',
   description:
-    '50% less than big agencies. Transparent pricing. Outcome-focused. See why Tennessee businesses choose Summit Studio for custom software.',
+    'Why Cookeville, TN businesses choose Summit Studio over big agencies and freelancers. 50% less cost, transparent fixed pricing, local accountability, and custom software that actually ships.',
+  alternates: {
+    canonical: '/why-us',
+  },
 };
 
 const agencyComparison = [

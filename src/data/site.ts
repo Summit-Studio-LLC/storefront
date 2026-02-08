@@ -6,4 +6,11 @@ export const siteConfig = {
   url: 'https://www.summitstudio.dev',
   email: 'hello@summitstudio.dev',
   location: 'Cookeville, Tennessee',
+  address: {
+    addressLocality: 'Cookeville',
+    addressRegion: 'TN',
+    addressCountry: 'US',
+  },
+  areaServed: ['Cookeville', 'Upper Cumberland', 'Putnam County', 'Tennessee'],
+  priceRange: '$2,500–$20,000',
 };
