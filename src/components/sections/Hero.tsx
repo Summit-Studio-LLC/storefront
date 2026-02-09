@@ -30,9 +30,9 @@ export default function Hero() {
           className="animate-fade-in-up text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-forest leading-[1.1]"
           style={{ animationDelay: '150ms' }}
         >
-          The peak of clarity for your{' '}
+          Your business, minus the{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest to-emerald-600">
-            business systems
+            busywork
           </span>
         </h1>
 
