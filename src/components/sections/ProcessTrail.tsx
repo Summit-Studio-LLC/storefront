@@ -158,7 +158,7 @@ export default function ProcessTrail() {
   return (
     <section className="relative max-w-[1120px] mx-auto px-4 pb-32">
       {/* Vertical Dashed Line (The Trail) */}
-      <div className="absolute left-8 md:left-1/2 top-0 bottom-32 w-px trail-line z-0 md:-translate-x-1/2 opacity-60" />
+      <div className="absolute left-[calc(1rem+30px)] md:left-1/2 top-0 bottom-32 w-px trail-line z-0 md:-translate-x-1/2 opacity-60" />
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-24 relative z-10">
         {processSteps.map((step, index) => (

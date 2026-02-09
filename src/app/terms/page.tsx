@@ -25,7 +25,7 @@ export default function TermsPage() {
           <span className="material-symbols-outlined text-base" aria-hidden="true">
             schedule
           </span>
-          Last Updated: February 2026
+          Last Updated: February 9, 2026
         </p>
       </header>
 
@@ -53,8 +53,7 @@ export default function TermsPage() {
               Privacy Policy
             </Link>
             . If you do not agree to these terms, you may not access the website or use our
-            services. We reserve the right to modify these terms at any time, and your continued use
-            of the website constitutes acceptance of any changes.
+            services.
           </p>
         </section>
 
@@ -125,10 +124,19 @@ export default function TermsPage() {
             distribute, or create derivative works from this content without our express written
             permission.
           </p>
-          <p className="leading-relaxed text-stone">
+          <p className="mb-4 leading-relaxed text-stone">
             <strong className="text-forest">Client Projects:</strong> Intellectual property rights
             for client projects are governed by individual project agreements. Generally, clients
-            retain ownership of custom software developed specifically for them upon full payment.
+            retain full ownership of all custom code, business logic, integrations, and
+            configurations built specifically for them upon full payment.
+          </p>
+          <p className="leading-relaxed text-stone">
+            <strong className="text-forest">Pre-Existing Tools:</strong> {siteConfig.name} retains
+            ownership of its internal tools, starter templates, component libraries, and
+            architectural patterns that exist independently of any client project. Clients receive a
+            perpetual, royalty-free license to use, modify, and maintain all delivered materials
+            &mdash; including any pre-existing tools incorporated into their project. There is no
+            lock-in: any developer can continue working on your project.
           </p>
         </section>
 
@@ -136,6 +144,82 @@ export default function TermsPage() {
         <section className="mb-10">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
             <span className="text-lg font-bold text-accent/40">04.</span>
+            Acceptable Use
+          </h3>
+          <p className="mb-4 leading-relaxed text-stone">
+            When using our website, you agree not to:
+          </p>
+          <ul className="mb-4 list-none space-y-3 pl-0">
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Use the website in any way that violates applicable laws or regulations
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Attempt to gain unauthorized access to any part of the website or its systems
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Use automated tools to scrape, crawl, or extract content from the website without
+                permission
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                Transmit harmful code, spam, or any material that could disrupt our services
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Section 5 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">05.</span>
+            Warranty Disclaimer
+          </h3>
+          <div className="rounded-xl border border-forest/10 bg-forest/5 p-6">
+            <p className="text-sm leading-relaxed text-stone">
+              This website and its content are provided on an &ldquo;as is&rdquo; and &ldquo;as
+              available&rdquo; basis without warranties of any kind, either express or implied,
+              including but not limited to implied warranties of merchantability, fitness for a
+              particular purpose, or non-infringement. We do not warrant that the website will be
+              uninterrupted, error-free, or free of harmful components. Warranties and guarantees
+              related to specific client services are defined in individual project agreements.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 6 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">06.</span>
             Limitation of Liability
           </h3>
           <p className="mb-4 leading-relaxed text-stone">
@@ -184,10 +268,10 @@ export default function TermsPage() {
           </div>
         </section>
 
-        {/* Section 5 */}
+        {/* Section 7 */}
         <section className="mb-10">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
-            <span className="text-lg font-bold text-accent/40">05.</span>
+            <span className="text-lg font-bold text-accent/40">07.</span>
             Governing Law
           </h3>
           <p className="leading-relaxed text-stone">
@@ -198,10 +282,24 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* Section 6 */}
+        {/* Section 8 */}
         <section className="mb-10">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
-            <span className="text-lg font-bold text-accent/40">06.</span>
+            <span className="text-lg font-bold text-accent/40">08.</span>
+            Severability
+          </h3>
+          <p className="leading-relaxed text-stone">
+            If any provision of these Terms of Service is found to be unenforceable or invalid by a
+            court of competent jurisdiction, that provision will be limited or eliminated to the
+            minimum extent necessary, and the remaining provisions will continue in full force and
+            effect.
+          </p>
+        </section>
+
+        {/* Section 9 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">09.</span>
             Changes to Terms
           </h3>
           <p className="leading-relaxed text-stone">
@@ -212,10 +310,30 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* Section 7 */}
+        {/* Section 10 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">10.</span>
+            Entire Agreement
+          </h3>
+          <p className="leading-relaxed text-stone">
+            These Terms of Service, together with our{' '}
+            <Link
+              href="/privacy"
+              className="font-semibold text-forest decoration-accent decoration-2 underline-offset-4 hover:underline"
+            >
+              Privacy Policy
+            </Link>{' '}
+            and any individual project agreements, constitute the entire agreement between you and{' '}
+            {siteConfig.name} regarding the use of our website and services. These terms supersede
+            any prior agreements or communications regarding the subject matter herein.
+          </p>
+        </section>
+
+        {/* Section 11 */}
         <section className="mb-12">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
-            <span className="text-lg font-bold text-accent/40">07.</span>
+            <span className="text-lg font-bold text-accent/40">11.</span>
             Contact Us
           </h3>
           <p className="mb-6 leading-relaxed text-stone">

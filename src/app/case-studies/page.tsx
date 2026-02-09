@@ -115,7 +115,7 @@ export default function CaseStudiesPage() {
                       {study.stats.map((stat) => (
                         <span
                           key={stat.label}
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold"
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold whitespace-nowrap"
                         >
                           <span className="material-symbols-outlined text-base" aria-hidden="true">
                             {statIcons[stat.label] || 'check_circle'}

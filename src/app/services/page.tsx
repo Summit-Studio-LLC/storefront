@@ -191,7 +191,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-topography-lines opacity-30 pointer-events-none" />
 
         <div className="relative mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-16">
-          <FadeUp className="lg:w-1/2">
+          <FadeUp className="w-full lg:w-1/2">
             <h2 className="text-3xl font-bold tracking-tight text-forest sm:text-4xl mb-6">
               What You Get
             </h2>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
             </div>
           </FadeUp>
 
-          <FadeUp delay={200} className="lg:w-1/2">
+          <FadeUp delay={200} className="w-full lg:w-1/2">
             <Link
               href="/case-studies/league-handicap"
               className="group relative block h-[400px] w-full rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-forest/90 to-emerald-800"
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                   className="material-symbols-outlined !text-[120px] text-white/10"
                   aria-hidden="true"
                 >
-                  landscape
+                  sports_golf
                 </span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />

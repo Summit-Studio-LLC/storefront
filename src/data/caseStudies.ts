@@ -46,9 +46,9 @@ export const caseStudies: CaseStudy[] = [
     problem:
       'No software existed for per-league handicap calculations. Every golf course was stuck doing it by hand — and nobody had built the product to fix it.',
     stats: [
-      { value: '<3 wks', label: 'Build time' },
-      { value: '~1 mo', label: 'To first paying customer' },
-      { value: 'Growing', label: 'New courses every week' },
+      { value: '<3 wks', label: 'build time' },
+      { value: '~1 mo', label: 'to first paying customer' },
+      { value: 'Growing', label: 'new courses every week' },
     ],
     discovery: [
       'Josh Riches is a PGA Professional who grew league participation at his course by 547% — from 46 members to over 250. That growth revealed a problem every golf course shares — and nobody had solved it.',

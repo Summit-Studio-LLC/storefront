@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <span className="material-symbols-outlined text-base" aria-hidden="true">
             schedule
           </span>
-          Last Updated: February 2026
+          Last Updated: February 9, 2026
         </p>
       </header>
 
@@ -150,6 +150,17 @@ export default function PrivacyPage() {
               >
                 check_circle
               </span>
+              <span className="text-stone">
+                Monitor and resolve technical errors on our website
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
               <span className="text-stone">Comply with legal obligations</span>
             </li>
           </ul>
@@ -162,7 +173,7 @@ export default function PrivacyPage() {
             Third-Party Services
           </h3>
           <p className="mb-4 leading-relaxed text-stone">
-            We use the following third-party services that may collect information:
+            We use the following third-party services that may collect or process information:
           </p>
           <ul className="mb-4 list-none space-y-3 pl-0">
             <li className="flex items-start gap-3">
@@ -185,14 +196,67 @@ export default function PrivacyPage() {
                 check_circle
               </span>
               <span className="text-stone">
-                <strong className="text-forest">Analytics services:</strong> To understand how
-                visitors use our website. This data is anonymized and aggregated.
+                <strong className="text-forest">Google Analytics:</strong> To understand how
+                visitors use our website, including pages visited, time on site, and general traffic
+                patterns. This data is anonymized and aggregated.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Vercel Analytics:</strong> For website performance
+                monitoring and usage metrics. Data is collected in aggregate form.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Sentry:</strong> For error tracking and performance
+                monitoring. Sentry may collect technical data including browser information, error
+                details, and anonymized session replays to help us identify and fix issues on our
+                website.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Resend:</strong> For delivering emails submitted
+                through our contact form. Resend processes your email address and message content to
+                facilitate delivery.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="material-symbols-outlined mt-0.5 text-xl text-accent"
+                aria-hidden="true"
+              >
+                check_circle
+              </span>
+              <span className="text-stone">
+                <strong className="text-forest">Vercel:</strong> Our website hosting provider.
+                Vercel may process standard server logs including IP addresses and request data.
               </span>
             </li>
           </ul>
           <p className="leading-relaxed text-stone">
             We do not sell, rent, or share your personal information with third parties for their
-            marketing purposes.
+            marketing purposes. Each third-party service listed above has its own privacy policy
+            governing their handling of data.
           </p>
         </section>
 
@@ -214,6 +278,22 @@ export default function PrivacyPage() {
         <section className="mb-10">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
             <span className="text-lg font-bold text-accent/40">05.</span>
+            Data Retention
+          </h3>
+          <p className="leading-relaxed text-stone">
+            We retain your personal information only for as long as necessary to fulfill the
+            purposes described in this policy. Contact form submissions and correspondence are
+            retained for the duration of any business relationship and for a reasonable period
+            afterward to address follow-up inquiries. Analytics data is retained in anonymized,
+            aggregated form. You may request deletion of your personal information at any time by
+            contacting us.
+          </p>
+        </section>
+
+        {/* Section 6 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">06.</span>
             Data Security
           </h3>
           <p className="mb-4 leading-relaxed text-stone">
@@ -229,10 +309,24 @@ export default function PrivacyPage() {
           </div>
         </section>
 
-        {/* Section 6 */}
+        {/* Section 7 */}
         <section className="mb-10">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
-            <span className="text-lg font-bold text-accent/40">06.</span>
+            <span className="text-lg font-bold text-accent/40">07.</span>
+            Children&apos;s Privacy
+          </h3>
+          <p className="leading-relaxed text-stone">
+            Our website and services are not directed to children under 13. We do not knowingly
+            collect personal information from children under 13. If you believe we have
+            inadvertently collected such information, please contact us and we will promptly delete
+            it.
+          </p>
+        </section>
+
+        {/* Section 8 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">08.</span>
             Your Rights
           </h3>
           <p className="mb-4 leading-relaxed text-stone">You have the right to:</p>
@@ -279,10 +373,25 @@ export default function PrivacyPage() {
           </p>
         </section>
 
-        {/* Section 7 */}
+        {/* Section 9 */}
+        <section className="mb-10">
+          <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
+            <span className="text-lg font-bold text-accent/40">09.</span>
+            Changes to This Policy
+          </h3>
+          <p className="leading-relaxed text-stone">
+            We may update this Privacy Policy from time to time to reflect changes in our practices
+            or for other operational, legal, or regulatory reasons. The updated policy will be
+            posted on this page with a revised &ldquo;Last Updated&rdquo; date. We encourage you to
+            review this policy periodically. Your continued use of our website after changes are
+            posted constitutes your acceptance of the updated policy.
+          </p>
+        </section>
+
+        {/* Section 10 */}
         <section className="mb-12">
           <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold text-forest">
-            <span className="text-lg font-bold text-accent/40">07.</span>
+            <span className="text-lg font-bold text-accent/40">10.</span>
             Contact Us
           </h3>
           <p className="mb-6 leading-relaxed text-stone">
