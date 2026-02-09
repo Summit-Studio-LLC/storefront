@@ -6,7 +6,7 @@ import { getWebSiteSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Summit Studio | Custom Software for Local Business',
   description:
-    'Custom software development in Cookeville, TN. We build workflow automation, scheduling systems, and dashboards for small businesses. Save 20+ hours per week. Transparent fixed pricing.',
+    'Custom software development in Cookeville, TN. We build workflow automation, scheduling systems, and dashboards for small businesses. Save 20+ hours per week. Straight answers, no jargon.',
   alternates: {
     canonical: '/',
   },

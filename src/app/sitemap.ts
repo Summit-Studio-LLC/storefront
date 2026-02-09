@@ -26,11 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/why-us`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/process`,
       changeFrequency: 'monthly',
       priority: 0.6,

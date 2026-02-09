@@ -5,7 +5,7 @@ import { faqCategories } from '@/data/faq';
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'FAQ about custom software development in Cookeville, TN. Pricing, timelines, process, and support. Transparent answers from Summit Studio.',
+    'FAQ about custom software development in Cookeville, TN. Timelines, process, and support. Straight answers from Summit Studio.',
   alternates: {
     canonical: '/faq',
   },

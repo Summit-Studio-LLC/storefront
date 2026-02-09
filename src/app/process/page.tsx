@@ -6,7 +6,7 @@ import ProcessTrail from '@/components/sections/ProcessTrail';
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'How Summit Studio builds custom software: free consultation, fixed-price proposal, milestone demos, launch, and training. 6-16 week delivery for Cookeville, TN businesses.',
+    'How Summit Studio builds custom software: free consultation, clear proposal, milestone demos, launch, and training. 6-16 week delivery for Cookeville, TN businesses.',
   alternates: {
     canonical: '/process',
   },

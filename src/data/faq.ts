@@ -1,6 +1,7 @@
 export interface FAQQuestion {
   question: string;
   answer: string;
+  link?: { label: string; href: string };
 }
 
 export interface FAQCategory {
@@ -15,44 +16,19 @@ export const faqCategories: FAQCategory[] = [
     name: 'General',
     questions: [
       {
-        question: 'What does Summit Studio do?',
+        question: 'How is Summit Studio different from a big agency?',
         answer:
-          'We build custom software for local businesses. If your team wastes time on manual data entry, paper forms, scheduling chaos, or spreadsheet management — we build a system to fix that.',
+          "You work directly with our founder — not a project manager relaying messages to an offshore team. We're a small, local shop that builds exactly what you need without the layers, overhead, or upsells. You get senior-level quality at a fraction of agency cost because our model is lean by design.",
       },
       {
         question: 'Who are your clients?',
         answer:
-          'Small and mid-sized businesses in the Cookeville area and Upper Cumberland region. Trades companies, professional services, healthcare practices, and more.',
+          'Small and mid-sized businesses in the Cookeville area and Upper Cumberland region. Trades companies, professional services, healthcare practices — anyone with manual workflows that waste time. We work with business owners directly, not layers of middlemen.',
       },
       {
         question: 'Are you a local company?',
-        answer: "Yes. We're based in Cookeville, Tennessee and focus on serving local businesses.",
-      },
-    ],
-  },
-  {
-    id: 'pricing',
-    name: 'Pricing & Payment',
-    questions: [
-      {
-        question: 'How much does a project cost?',
         answer:
-          'Projects range from $2,500 to $20,000 depending on complexity. We publish our pricing because we believe in transparency. See our Services page for details.',
-      },
-      {
-        question: 'Do you charge hourly?',
-        answer:
-          'No. Every project is fixed-price. You know the cost before you commit. No surprises.',
-      },
-      {
-        question: 'What are the payment terms?',
-        answer:
-          '30% upfront, 30% at the midpoint, 40% at final delivery. You see progress before you pay more.',
-      },
-      {
-        question: 'Do you offer discounts?',
-        answer:
-          'We occasionally offer pilot pricing for new types of projects. Ask during your consultation.',
+          "Yes. We're based in Cookeville, Tennessee and focus on serving local businesses. You'll work directly with our founder — not a remote team you'll never meet.",
       },
     ],
   },
@@ -63,22 +39,23 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'How long does a project take?',
         answer:
-          '6-16 weeks depending on complexity. Starter projects take 6-8 weeks, Standard 10-12, Advanced 14-16.',
+          '6–16 weeks depending on complexity. Simpler single-workflow projects land in the 6–8 week range, while more complex multi-system builds take 14–16 weeks. We scope every project during a free consultation so you know the timeline upfront before committing.',
       },
       {
         question: "What's the process like?",
         answer:
-          "Free consultation → Scoping → Proposal → Build (with regular demos) → Launch → Training. You're involved at every step.",
+          "It starts with a free 30-minute consultation where we map out your problem. From there: scoping, a fixed-price proposal, then we build — with regular demos so you see working features throughout. After launch you get training for your team and full documentation. You're involved at every step.",
+        link: { label: 'See our full process', href: '/process' },
       },
       {
         question: 'Will I see progress during the project?',
         answer:
-          'Yes. We demo working features regularly. Milestone payments are tied to visible progress.',
+          'Yes. We demo working features regularly so you can give feedback throughout the build. Milestone payments are tied to visible progress — you see results before you pay more.',
       },
       {
         question: 'What if I need changes during the project?',
         answer:
-          'Minor adjustments within scope are included. Significant changes are handled through a straightforward change order process.',
+          'Minor adjustments within scope are included. Significant changes are handled through a straightforward change order process so there are no surprises on either side.',
       },
     ],
   },
@@ -89,22 +66,17 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'What happens after the project is done?',
         answer:
-          'You get full documentation, training for your team, and a 30-60 day warranty. After that, optional retainer plans are available for ongoing support.',
-      },
-      {
-        question: "What's included in the warranty?",
-        answer:
-          'If something we built breaks within 30-60 days of launch, we fix it at no extra charge.',
+          "You're not left on your own. Every project ends with full documentation, hands-on training for your team, and a 30–60 day warranty — if something we built breaks, we fix it at no charge. After the warranty, we offer monthly retainer plans for ongoing maintenance, updates, and support so your system keeps running as your business evolves.",
       },
       {
         question: 'Do you offer ongoing support?',
         answer:
-          'Yes. Monthly retainer plans start at $300/month for 2 hours of support. Most clients choose our Silver plan ($750/month, 5 hours).',
+          'Yes. We offer monthly retainer plans ranging from lightweight monitoring to hands-on partnership, depending on how critical the system is to your operations. Ask about options during your consultation.',
       },
       {
         question: 'Who actually builds the software?',
         answer:
-          'Our founder leads every project. As we grow, Tennessee Tech CS students contribute under direct senior mentorship — every line of code is reviewed before it ships.',
+          'Our founder leads every project. As we grow, Tennessee Tech CS students contribute under direct senior mentorship — every line of code is reviewed by a senior engineer before it ships. You get affordable rates backed by professional-grade quality.',
       },
     ],
   },
@@ -115,22 +87,22 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'What technologies do you use?',
         answer:
-          'We use proven, maintainable technologies — nothing bleeding-edge or experimental. We choose the right tool for your project, not the trendiest one.',
+          'We pick the right tool for the job. Common choices include TypeScript, Go, PostgreSQL, and Firebase for backends; React and Next.js for web interfaces; and AI integrations where they save real time — like automating data entry or generating reports from raw input. We also use proven automation platforms when they fit. The goal is a system that works reliably for years.',
       },
       {
         question: 'Will I own the code?',
         answer:
-          'Yes. You own everything we build. Full source code, documentation, and deployment access.',
+          'You own all the custom code we build for your business — your logic, your data, your integrations, your configurations. Full source code, documentation, and deployment access. We retain ownership of our internal tools and starter templates that we use across projects, but you get a perpetual license to use everything we deliver. No lock-in — any developer can pick up where we left off.',
       },
       {
         question: 'Can you integrate with tools I already use?',
         answer:
-          'Usually yes. We commonly integrate with QuickBooks, Google Workspace, Square, Calendly, and other business tools.',
+          'Usually yes. We commonly integrate with QuickBooks, Google Workspace, Square, Calendly, Stripe, and other business tools. If your systems have an API, we can almost certainly connect them.',
       },
       {
         question: 'Do I need to understand technology?',
         answer:
-          'Not at all. We handle everything technical. You focus on telling us how your business works and what wastes your time.',
+          "Not at all. We handle everything technical and explain things in plain language. You focus on telling us how your business works and what wastes your time — we'll handle the rest.",
       },
     ],
   },

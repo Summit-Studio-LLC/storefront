@@ -42,7 +42,6 @@ export function getLocalBusinessSchema(): JsonLd {
       '@type': 'Place',
       name: area,
     })),
-    priceRange: siteConfig.priceRange,
   };
 }
 
@@ -61,6 +60,19 @@ export function getWebSiteSchema(): JsonLd {
   };
 }
 
+export function getBreadcrumbSchema(items: { name: string; url: string }[]): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 export function getFAQPageSchema(
   categories: { questions: { question: string; answer: string }[] }[]
 ): JsonLd {
@@ -75,54 +87,6 @@ export function getFAQPageSchema(
         '@type': 'Answer',
         text: q.answer,
       },
-    })),
-  };
-}
-
-export function getServiceSchemas(
-  services: { title: string; description: string; startingAt?: string }[]
-): JsonLd {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: services.map((service, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Service',
-        name: service.title,
-        description: service.description,
-        provider: {
-          '@type': 'Organization',
-          name: siteConfig.name,
-          url: siteConfig.url,
-        },
-        areaServed: {
-          '@type': 'Place',
-          name: siteConfig.location,
-        },
-        ...(service.startingAt &&
-          service.startingAt !== 'Varies' && {
-            offers: {
-              '@type': 'Offer',
-              price: service.startingAt.replace(/[^0-9.]/g, ''),
-              priceCurrency: 'USD',
-            },
-          }),
-      },
-    })),
-  };
-}
-
-export function getBreadcrumbSchema(items: { name: string; url: string }[]): JsonLd {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
     })),
   };
 }
