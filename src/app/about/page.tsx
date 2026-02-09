@@ -32,7 +32,7 @@ const modelCards = [
     title: 'Senior Engineers',
     tagline: 'Community Through Expertise',
     description:
-      'Experienced remote engineers contribute through mentoring, code review, and optional consulting. Every project benefits from senior-level oversight.',
+      'Experienced local senior engineers contribute through mentoring, code review, and optional consulting. Every project benefits from senior-level oversight.',
   },
 ];
 

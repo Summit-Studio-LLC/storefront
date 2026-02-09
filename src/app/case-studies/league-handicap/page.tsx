@@ -94,6 +94,22 @@ export default function LeagueHandicapPage() {
                   <p className="text-forest font-semibold">{study.client}</p>
                 </div>
                 <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-stone/60 mb-1">
+                    Product
+                  </h3>
+                  <a
+                    href="https://leaguehandicap.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-forest font-semibold hover:text-accent transition-colors"
+                  >
+                    leaguehandicap.com
+                    <span className="material-symbols-outlined !text-[14px]" aria-hidden="true">
+                      open_in_new
+                    </span>
+                  </a>
+                </div>
+                <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-stone/60 mb-2">
                     Services
                   </h3>

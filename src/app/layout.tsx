@@ -103,7 +103,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} ${instrumentSerif.variable} antialiased`}>
         {/* Global Grain Texture Overlay */}
         <div className="fixed inset-0 pointer-events-none opacity-40 z-[5] bg-grain mix-blend-multiply" />
-        <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div className="relative flex min-h-screen w-full flex-col overflow-x-clip">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

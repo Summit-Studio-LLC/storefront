@@ -8,10 +8,13 @@ import { trackEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const lastScrollY = useRef(0);
+  const isHidden = useRef(false);
   const pathname = usePathname();
 
   // Close mobile menu when route changes
@@ -19,6 +22,51 @@ export function Header() {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: sync menu state to route changes
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  // Hide on scroll down, show on scroll up — uses refs + direct DOM to avoid React batching issues
+  useEffect(() => {
+    let ticking = false;
+
+    function setHeaderVisible(visible: boolean) {
+      if (isHidden.current === !visible) return; // no change
+      isHidden.current = !visible;
+      if (headerRef.current) {
+        headerRef.current.style.transform = visible ? 'translateY(0)' : 'translateY(-100%)';
+      }
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        const lastY = lastScrollY.current;
+        const delta = currentY - lastY;
+
+        if (currentY < 50) {
+          setHeaderVisible(true);
+        } else if (delta > 5) {
+          setHeaderVisible(false);
+        } else if (delta < -5) {
+          setHeaderVisible(true);
+        }
+
+        lastScrollY.current = currentY;
+        ticking = false;
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Force header visible when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen && headerRef.current) {
+      isHidden.current = false;
+      headerRef.current.style.transform = 'translateY(0)';
+    }
+  }, [isMobileMenuOpen]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -47,7 +95,10 @@ export function Header() {
   }, [isMobileMenuOpen, handleKeyDown]);
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-offwhite/90 border-b border-[#eaf0ee]">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 w-full backdrop-blur-md bg-offwhite/90 border-b border-[#eaf0ee] transition-transform duration-300"
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 text-forest group">
