@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 interface FormData {
   name: string;
@@ -43,8 +44,10 @@ export function ContactForm() {
       }
 
       setIsSubmitted(true);
+      trackEvent('contact_form_submitted');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+      trackEvent('contact_form_error');
     } finally {
       setIsSubmitting(false);
     }

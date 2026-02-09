@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/Logo';
 import { ctaLink, navLinks } from '@/data/navigation';
 import { siteConfig } from '@/data/site';
+import { trackEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -71,7 +72,12 @@ export function Header() {
             ))}
           </nav>
           <Button variant="cta" asChild>
-            <Link href={ctaLink.href}>{ctaLink.label}</Link>
+            <Link
+              href={ctaLink.href}
+              onClick={() => trackEvent('cta_click', { location: 'header_desktop' })}
+            >
+              {ctaLink.label}
+            </Link>
           </Button>
         </div>
 
@@ -118,7 +124,12 @@ export function Header() {
               ))}
               <li className="pt-2">
                 <Button variant="cta" className="w-full" asChild>
-                  <Link href={ctaLink.href}>{ctaLink.label}</Link>
+                  <Link
+                    href={ctaLink.href}
+                    onClick={() => trackEvent('cta_click', { location: 'header_mobile' })}
+                  >
+                    {ctaLink.label}
+                  </Link>
                 </Button>
               </li>
             </ul>
