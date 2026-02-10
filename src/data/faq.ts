@@ -18,17 +18,27 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'How is Summit Studio different from a big agency?',
         answer:
-          "You work directly with our founder — not a project manager relaying messages to an offshore team. We're a small, local shop that builds exactly what you need without the layers, overhead, or upsells. You get senior-level quality at a fraction of agency cost because our model is lean by design.",
+          'You get the same caliber of engineering as a 50-person agency — minus the overhead. No project managers relaying messages. No offshore teams. No account executives. You work directly with the senior engineer building your software. Our model is lean by design: senior-led development, reviewed code, honest pricing.',
       },
       {
         question: 'Who are your clients?',
         answer:
-          'Small and mid-sized businesses in the Cookeville area and Upper Cumberland region. Trades companies, professional services, healthcare practices — anyone with manual workflows that waste time. We work with business owners directly, not layers of middlemen.',
+          "Small and mid-sized businesses — both local and nationwide. We work with local service companies automating workflows, growing startups building their first product, and established businesses modernizing legacy systems. If you need real software built by a senior engineer, we're a good fit.",
       },
       {
         question: 'Are you a local company?',
         answer:
-          "Yes. We're based in Cookeville, Tennessee and focus on serving local businesses. You'll work directly with our founder — not a remote team you'll never meet.",
+          "We're based in Cookeville, Tennessee — and we work with clients locally and remotely. Our process works the same regardless of location: milestone demos, regular communication, transparent delivery. You'll always work directly with our founder.",
+      },
+      {
+        question: 'What size projects do you take on?',
+        answer:
+          "From 4-week automation builds to 6+ month platform projects. We scope every engagement during a free consultation and tell you honestly whether we're the right fit for the scale and complexity of what you need.",
+      },
+      {
+        question: 'Do you work with remote clients?',
+        answer:
+          "Yes. We work with clients locally in Tennessee and remotely across the country. Our process — milestone demos, regular communication, full documentation — works the same regardless of where you're located.",
       },
     ],
   },
@@ -87,7 +97,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'What technologies do you use?',
         answer:
-          'We pick the right tool for the job. Common choices include TypeScript, Go, PostgreSQL, and Firebase for backends; React and Next.js for web interfaces; and AI integrations where they save real time — like automating data entry or generating reports from raw input. We also use proven automation platforms when they fit. The goal is a system that works reliably for years.',
+          'Our stack spans the full development spectrum. TypeScript, Python, and Go for backends. React, Next.js, and Flutter for frontends. AWS, GCP, and Terraform for infrastructure. PostgreSQL and MongoDB for data. AI integrations using OpenAI, Anthropic, and custom solutions. We pick the right tool for the project — not the trendiest one.',
       },
       {
         question: 'Will I own the code?',
@@ -103,6 +113,21 @@ export const faqCategories: FAQCategory[] = [
         question: 'Do I need to understand technology?',
         answer:
           "Not at all. We handle everything technical and explain things in plain language. You focus on telling us how your business works and what wastes your time — we'll handle the rest.",
+      },
+      {
+        question: 'Do you build mobile apps?',
+        answer:
+          'Yes. We build cross-platform mobile applications for iOS and Android using Flutter. From initial design through App Store and Google Play deployment — development, testing, and launch.',
+      },
+      {
+        question: 'Can you handle cloud infrastructure and DevOps?',
+        answer:
+          'Yes. We design and manage cloud infrastructure on AWS and GCP using Terraform for Infrastructure as Code. That includes CI/CD pipelines, deployment automation, monitoring, alerting, and cost optimization. Your infrastructure is documented, version-controlled, and reproducible.',
+      },
+      {
+        question: 'Do you work with AI?',
+        answer:
+          'Yes — where it creates real value, not as a buzzword. We integrate AI for document processing, data extraction, intelligent automation, and custom tooling. We use models from OpenAI, Anthropic, and custom solutions depending on the use case and data sensitivity.',
       },
     ],
   },

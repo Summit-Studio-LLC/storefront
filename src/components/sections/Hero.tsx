@@ -30,9 +30,9 @@ export default function Hero() {
           className="animate-fade-in-up text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-forest leading-[1.1]"
           style={{ animationDelay: '150ms' }}
         >
-          Your business, minus the{' '}
+          Custom software to elevate{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest to-emerald-600">
-            busywork
+            your business
           </span>
         </h1>
 
@@ -41,8 +41,8 @@ export default function Hero() {
           className="animate-fade-in-up text-lg md:text-xl text-stone max-w-2xl font-medium leading-relaxed"
           style={{ animationDelay: '300ms' }}
         >
-          We design and build custom automation tools to help you scale without the chaos. Reach the
-          summit of your efficiency.
+          Your idea, architected and deployed by a senior engineer. Fixed-price projects. No
+          handoffs, no surprises.
         </p>
 
         {/* CTAs */}
@@ -67,7 +67,7 @@ export default function Hero() {
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>
-            <Link href="/case-studies">View Case Studies</Link>
+            <Link href="/case-studies">See Case Studies</Link>
           </Button>
         </div>
       </div>

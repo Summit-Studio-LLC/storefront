@@ -13,6 +13,7 @@ export type CaseStudy = {
   keyTakeaway: string;
   solution: string[];
   results: { before: string; after: string }[];
+  tags?: string[];
   lookingForward: {
     intro: string;
     items: string[];
@@ -32,8 +33,9 @@ export const caseStudies: CaseStudy[] = [
     title: 'From Spreadsheet Chaos to Automated Platform',
     subtitle:
       'How a PGA Professional spotted a gap in the golf industry — and we built the product that fills it.',
-    category: 'Golf / Workflow Automation',
-    categoryTag: 'Golf / Workflow Automation',
+    category: 'Product Development',
+    categoryTag: 'Product Development',
+    tags: ['Web Platform', 'SaaS', 'Product Development'],
     client: 'Albatross Systems LLC',
     services: [
       'Workflow Automation',

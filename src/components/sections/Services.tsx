@@ -10,17 +10,16 @@ export default function Services() {
         {/* Section Header */}
         <FadeUp className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">What We Build</h2>
             <p className="text-stone text-lg">
-              We build software that replaces manual work, connects your tools, and brings new ideas
-              to life.
+              End-to-end development across web, mobile, cloud, and AI.
             </p>
           </div>
           <Link
             href="/services"
             className="group/link hidden md:flex items-center gap-1.5 text-forest font-bold hover:text-accent transition-colors"
           >
-            <span className="underline-center">See all services</span>
+            <span className="underline-center">See all capabilities</span>
             <span
               className="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover/link:translate-x-1"
               aria-hidden="true"
@@ -31,7 +30,7 @@ export default function Services() {
         </FadeUp>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {landingServices.map((service, index) => (
             <FadeUp key={service.title} delay={index * 150}>
               <Card className="group relative overflow-hidden transition-all hover:shadow-xl hover:border-forest/20 h-full">

@@ -16,10 +16,15 @@ export function getOrganizationSchema(): JsonLd {
     logo: logoObject,
     email: siteConfig.email,
     description: siteConfig.description,
-    areaServed: siteConfig.areaServed.map((area) => ({
-      '@type': 'Place',
-      name: area,
-    })),
+    areaServed: [{ '@type': 'Country', name: 'United States' }],
+    knowsAbout: [
+      'Web Application Development',
+      'Mobile App Development',
+      'Cloud Infrastructure',
+      'AI Integration',
+      'Workflow Automation',
+      'Software Consulting',
+    ],
   };
 }
 
@@ -38,10 +43,15 @@ export function getLocalBusinessSchema(): JsonLd {
       addressRegion: siteConfig.address.addressRegion,
       addressCountry: siteConfig.address.addressCountry,
     },
-    areaServed: siteConfig.areaServed.map((area) => ({
-      '@type': 'Place',
-      name: area,
-    })),
+    areaServed: [{ '@type': 'Country', name: 'United States' }],
+    knowsAbout: [
+      'Web Application Development',
+      'Mobile App Development',
+      'Cloud Infrastructure',
+      'AI Integration',
+      'Workflow Automation',
+      'Software Consulting',
+    ],
   };
 }
 

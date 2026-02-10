@@ -6,7 +6,7 @@ import { FadeUp } from '@/components/ui/FadeUp';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Summit Studio is a software consultancy in Cookeville, TN. We build custom software for local businesses while mentoring the next generation of developers.',
+    'Summit Studio is a software development studio led by a senior engineer with 7+ years across ad tech, fintech, logistics, and secure communications. Based in Cookeville, TN.',
   alternates: {
     canonical: '/about',
   },
@@ -14,25 +14,25 @@ export const metadata: Metadata = {
 
 const modelCards = [
   {
-    icon: 'storefront',
-    title: 'Local Businesses',
-    tagline: 'Real Solutions, Built to Fit',
+    icon: 'handshake',
+    title: 'Our Clients',
+    tagline: 'Direct Access, Real Results',
     description:
-      'Custom software built for how your business actually works. Local accountability, transparent process, outcomes you can measure.',
+      'You work directly with the senior engineer building your software. No project managers relaying messages. No offshore handoffs. Custom-built for how your business actually works — web, mobile, cloud, or automation.',
   },
   {
-    icon: 'school',
-    title: 'CS Students',
-    tagline: 'Real Experience, Real Mentorship',
+    icon: 'groups',
+    title: 'Our Team',
+    tagline: 'Mentored, Reviewed, Production-Ready',
     description:
-      'Tennessee Tech students work on real client projects under senior mentorship. They build portfolio pieces, learn professional workflows, and get career support.',
+      'Tennessee Tech CS students work on real client projects under direct senior mentorship. Every line of code is reviewed by a senior engineer before it ships. This is how we scale without compromising quality — and how we keep costs honest.',
   },
   {
-    icon: 'engineering',
-    title: 'Senior Engineers',
-    tagline: 'Community Through Expertise',
+    icon: 'hub',
+    title: 'Our Network',
+    tagline: 'Depth When You Need It',
     description:
-      'Experienced local senior engineers contribute through mentoring, code review, and optional consulting. Every project benefits from senior-level oversight.',
+      'Experienced engineers contribute through code review, architecture consulting, and specialized expertise. When a project needs skills beyond our core team, we bring in trusted senior professionals — not contractors from a staffing agency.',
   },
 ];
 
@@ -68,16 +68,16 @@ const values = [
 
 const founderSections = [
   {
-    label: 'The Translator',
-    text: "I started Summit Studio because I kept seeing the same thing: local business owners struggling to communicate with big, remote dev shops. They were sold features they didn't need, in language they didn't understand. With a computer science degree, an MBA in IT management, and years on both sides of the table — including a year of door-to-door sales and two years of mission work — I learned to listen first. My job is to sit across from you, understand what's actually costing you time and money, and then build the thing that fixes it. No translator needed.",
+    label: 'The Engineer',
+    text: "Seven years of professional software engineering across ad tech, secure communications, logistics, and fintech. I've held two simultaneous senior engineering roles and shipped production systems in TypeScript, Python, Go, React, Flutter, AWS, GCP, and so much more. I don't just manage engineers — I am one. Every project at Summit Studio is led by me, and I write code on every single one.",
   },
   {
-    label: 'The Veteran',
-    text: "Seven years of professional software engineering across ad tech, secure communications, logistics, and fintech. I've held two simultaneous senior engineering roles and spent two years inside a 45-person consulting firm learning how the model works from the inside. I didn't wake up one day and decide to start a consultancy — I've done this before, and I bring that discipline to every project we touch.",
+    label: 'The Operator',
+    text: 'I spent two years inside a 45-person consulting firm and learned how the agency model works from the inside — the good parts and the waste. Summit Studio exists because I saw a better way: deliver the same caliber of engineering without the layers of project managers, account executives, and overhead that double the price. You get senior work at an honest rate because our model is lean by design.',
   },
   {
-    label: 'The Local',
-    text: "I moved to Cookeville to be close to family. My wife grew up here — we built our house on her family's ranch and we're raising our 3 kids where they can see their grandparents. I chose this community, and Summit Studio is my way of investing in it. The businesses here deserve the same quality of software that companies in big cities get, without the big-city price tag or the big-city runaround.",
+    label: 'The Founder',
+    text: "I moved to Cookeville to be close to family — my wife grew up here, and we're raising our three kids on her family's ranch. I chose this community, and Summit Studio is how I invest in it. But the work isn't limited to Cookeville. We serve clients locally and nationwide. Whether you're across town or across the country, you get the same thing: direct access to the engineer building your product.",
   },
 ];
 
@@ -91,21 +91,22 @@ export default function AboutPage() {
             className="animate-fade-in-up mb-6 inline-block rounded-full bg-forest/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-forest"
             style={{ animationDelay: '0ms' }}
           >
-            Cookeville, TN
+            About Summit Studio
           </span>
           <h1
             className="animate-fade-in-up mb-8 max-w-3xl font-serif text-5xl leading-[1.1] text-forest md:text-7xl"
             style={{ animationDelay: '150ms' }}
           >
-            Technology That Works for Your Business
+            Engineering depth. Studio accountability.
           </h1>
           <p
             className="animate-fade-in-up max-w-2xl text-lg leading-relaxed text-stone md:text-xl"
             style={{ animationDelay: '300ms' }}
           >
-            Summit Studio is a software consultancy based in Cookeville, Tennessee. We help local
-            businesses replace the manual work, paper forms, and disconnected tools that slow them
-            down — with simple, custom software that fits how they actually operate.
+            Summit Studio is a software development studio based in Cookeville, Tennessee. We build
+            web applications, mobile apps, cloud systems, and automation tools for businesses that
+            need real engineering — without the agency overhead. Every project is led by a senior
+            engineer. Every line of code is reviewed before it ships.
           </p>
         </div>
       </section>
@@ -114,10 +115,9 @@ export default function AboutPage() {
       <section className="w-full border-y border-stone/5 bg-white/50 py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <FadeUp className="mb-12 text-center md:text-left">
-            <h2 className="mb-4 font-serif text-4xl text-forest">Our Model</h2>
+            <h2 className="mb-4 font-serif text-4xl text-forest">How We Work</h2>
             <p className="max-w-xl text-stone">
-              A balanced ecosystem designed to deliver high-quality software while investing in the
-              future of our local tech community.
+              A lean model designed to deliver senior-quality work at honest prices.
             </p>
           </FadeUp>
 
@@ -189,8 +189,9 @@ export default function AboutPage() {
             <div className="w-full pt-4 lg:w-7/12">
               <FadeUp>
                 <h2 className="mb-10 font-serif text-5xl leading-tight text-forest">
-                  Built on Trust, <br />
-                  Rooted in Code.
+                  Seven years of code.
+                  <br />
+                  One studio.
                 </h2>
               </FadeUp>
 
@@ -213,10 +214,10 @@ export default function AboutPage() {
       <section className="w-full px-6 py-24">
         <FadeUp className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
           <h2 className="font-serif text-4xl leading-tight text-forest md:text-5xl">
-            Want to meet the person behind the code?
+            Want to talk to the engineer, not a salesperson?
           </h2>
           <p className="max-w-lg text-lg text-stone">
-            Let&apos;s have a conversation about your business. No pitch, no pressure.
+            30 minutes. You describe the project. We tell you honestly if we can help.
           </p>
           <Button
             variant="cta"

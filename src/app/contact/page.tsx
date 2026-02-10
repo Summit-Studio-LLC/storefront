@@ -6,7 +6,7 @@ import { siteConfig } from '@/data/site';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Schedule a free 30-minute consultation with Summit Studio. Custom software for small businesses in Cookeville, TN and the Upper Cumberland region. No obligation, straight answers.',
+    "Schedule a free consultation to discuss your software project. Web, mobile, cloud, AI — we'll scope it and tell you honestly if we can help.",
   alternates: {
     canonical: '/contact',
   },
@@ -24,15 +24,15 @@ export default function ContactPage() {
               className="animate-fade-in-up mb-6 font-serif text-5xl leading-[1.1] text-forest md:text-6xl"
               style={{ animationDelay: '0ms' }}
             >
-              Reach the <br />
-              <span className="italic text-accent">Summit</span>
+              Let&apos;s talk about your <br />
+              <span className="italic text-accent">project</span>
             </h1>
             <p
               className="animate-fade-in-up mb-12 max-w-md text-lg leading-relaxed text-stone"
               style={{ animationDelay: '150ms' }}
             >
-              We specialize in automating the mundane so you can focus on the extraordinary.
-              Let&apos;s schedule a discovery call to discuss your business needs.
+              Web app, mobile app, cloud migration, or something else entirely — tell us what
+              you&apos;re building. We&apos;ll tell you honestly how we&apos;d approach it.
             </p>
 
             <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '300ms' }}>

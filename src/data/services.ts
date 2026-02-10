@@ -1,21 +1,39 @@
 export const landingServices = [
   {
-    icon: 'precision_manufacturing',
-    title: 'Workflow Automation',
+    icon: 'web',
+    title: 'Web Applications',
     description:
-      'Streamline repetitive tasks and reclaim your time with intelligent bots that handle the heavy lifting for you.',
+      'Full-stack web apps — dashboards, portals, SaaS platforms, and internal tools. React, Next.js, Django.',
   },
   {
-    icon: 'monitoring',
-    title: 'Custom Dashboards',
+    icon: 'smartphone',
+    title: 'Mobile Apps',
     description:
-      "Visualize your data with bespoke admin panels designed for clarity, giving you a bird's-eye view of your business.",
+      'Cross-platform iOS and Android apps built with Flutter. From concept to App Store.',
+  },
+  {
+    icon: 'smart_toy',
+    title: 'AI & Automation',
+    description:
+      'Intelligent workflows, AI integrations, and automation systems that eliminate manual work.',
+  },
+  {
+    icon: 'cloud',
+    title: 'Cloud & Infrastructure',
+    description:
+      'AWS, GCP, Terraform. Production infrastructure, CI/CD pipelines, and scalable architecture.',
   },
   {
     icon: 'rocket_launch',
-    title: 'New Product Ideas',
+    title: 'Custom Platforms',
     description:
-      "Have an idea for a tool or app? We turn it into real software — built to scale from day one, not a prototype you'll throw away.",
+      'Turn your idea into production software. MVPs, platforms, and full products — built to scale.',
+  },
+  {
+    icon: 'psychology',
+    title: 'Architecture & Strategy',
+    description:
+      'Architecture reviews, tech selection, migration planning, and system audits. Senior-level technical leadership without the full build.',
   },
 ];
 
@@ -35,7 +53,7 @@ export const processSteps = [
   {
     step: 3,
     title: 'Build & Demo',
-    duration: '6-16 weeks',
+    duration: '4-20+ weeks',
     description: 'Milestone delivery. Regular demos. No surprises.',
   },
   {
@@ -52,53 +70,45 @@ export const processSteps = [
   },
 ];
 
-// Option B: Customer-voice pain points (active)
-// Option A alt: "Common Friction Points" header, consultant-style titles:
-//   "Wasted Time on Manual Entry", "Disconnected Data Silos",
-//   "The Spreadsheet Ceiling", "Inconsistent Client Experience",
-//   "Missed Follow-ups", "Burnout from Admin"
 export const frictionPoints = [
   {
-    icon: 'schedule',
-    title: '"We\'re drowning in paperwork"',
+    icon: 'code_off',
+    title: '"We need an app but don\'t have a dev team"',
     description:
-      'Your team spends hours every week on data entry, copying info between spreadsheets, and filling out the same forms. That time should go to your customers.',
+      'You have the idea and the market — you need someone who can actually build it. Not a Fiverr prototype. Real software that works in production.',
   },
   {
-    icon: 'event_busy',
-    title: '"I keep double-booking clients"',
+    icon: 'web',
+    title: '"We need a website or dashboard but don\'t know where to start"',
     description:
-      'Without a real scheduling system, appointments fall through the cracks. Clients get frustrated, and you lose business you already earned.',
+      "You need a professional web presence or an internal dashboard to make sense of your data — but you don't have a designer or developer on staff.",
   },
   {
-    icon: 'table_view',
-    title: '"We run everything out of spreadsheets"',
+    icon: 'trending_up',
+    title: '"We\'re scaling and our systems can\'t keep up"',
     description:
-      'Spreadsheets were fine when you had 10 clients. Now you have 200, and one wrong formula breaks everything. You need something built for how you actually work.',
+      "What worked at 10 employees breaks at 50. Spreadsheets, manual processes, and duct-taped tools don't scale with you.",
   },
   {
-    icon: 'person_off',
-    title: '"When someone quits, the knowledge leaves with them"',
+    icon: 'warning',
+    title: '"We got burned by our last dev shop"',
     description:
-      "Critical processes live in people's heads, not in systems. Every new hire starts from scratch, and things get missed during the transition.",
+      'They went over budget, missed deadlines, and left you with code nobody can maintain. You need someone who scopes honestly and actually finishes.',
   },
   {
-    icon: 'mark_email_unread',
-    title: '"Leads fall through the cracks"',
+    icon: 'person_search',
+    title: '"We need senior engineering but can\'t justify a full-time hire"',
     description:
-      "A potential customer called last Tuesday. Did anyone follow up? Nobody knows, because there's no system tracking it. That's revenue walking out the door.",
+      'A senior engineer costs $180K+/year. You need that expertise for a few months, not forever. We fill that gap.',
   },
   {
-    icon: 'battery_alert',
-    title: '"I started a business, not an admin job"',
+    icon: 'cloud_off',
+    title: '"Our infrastructure is held together with tape"',
     description:
-      "You're spending your evenings on invoices, scheduling, and data cleanup instead of growing the business. You didn't sign up for this.",
+      "No CI/CD, no monitoring, manual deployments. One person knows how it all works and they're about to leave.",
   },
 ];
 
-// Option B: Concrete, outcome-focused automation services (active)
-// Option A alt: "Optimize & Automate" header with titles:
-//   "Workflow Automation", "System Integration", "Reporting & Dashboards"
 export const optimizeServices = [
   {
     icon: 'precision_manufacturing',
@@ -120,10 +130,6 @@ export const optimizeServices = [
   },
 ];
 
-// Option B: Concrete, outcome-focused greenfield services (active)
-// Option A alt: "New Summits" header with titles:
-//   "Custom Operating Systems", "Scalable MVP Development",
-//   "Integrated Automation Ecosystems"
 export const greenfieldServices = [
   {
     icon: 'settings_system_daydream',
@@ -145,23 +151,259 @@ export const greenfieldServices = [
   },
 ];
 
-// Option B: Concrete outcomes customers can picture (active)
-// Option A alt: "The Right Foundation" header with titles:
-//   "Scalable from Day 1", "Custom Fit", "Human-Centric Design"
 export const outcomePoints = [
   {
-    title: 'Your Team Gets Hours Back Every Week',
+    title: 'Software that actually ships',
     description:
-      'The tasks that eat up Monday mornings — data entry, status updates, report assembly — run automatically. Your people focus on customers instead.',
+      'We scope it, build it, and deliver it. Fixed-price proposals, milestone demos, no surprises. You get working software, not a slide deck.',
   },
   {
-    title: 'New Employees Get Up to Speed Fast',
+    title: 'Architecture that scales with you',
     description:
-      "When processes live in software instead of people's heads, training takes days instead of months. Nothing critical gets lost when someone leaves.",
+      'Built on proven technology with clean code, real documentation, and infrastructure that grows as your business does.',
   },
   {
-    title: 'You Can Actually Delegate',
+    title: 'A partner, not a vendor',
     description:
-      "With clear systems and real visibility, you don't have to be involved in every decision. The business runs whether you're there or not.",
+      'Direct access to the engineer building your product. No account managers, no ticket queues. When you call, the person who wrote the code answers.',
+  },
+];
+
+export const serviceCategories = [
+  {
+    icon: 'web',
+    title: 'Web Applications',
+    description:
+      'Full-stack web applications — internal tools, customer portals, SaaS products, admin platforms, and complex multi-tenant systems. Architected for performance, security, and long-term maintainability.',
+    technologies: ['React', 'Next.js', 'Django', 'Node.js', 'TypeScript', 'Go'],
+  },
+  {
+    icon: 'smartphone',
+    title: 'Mobile Apps',
+    description:
+      'Cross-platform mobile applications for iOS and Android built with Flutter. From concept through App Store deployment — design, development, testing, and launch.',
+    technologies: ['Flutter', 'Dart', 'iOS', 'Android'],
+  },
+  {
+    icon: 'smart_toy',
+    title: 'AI & Automation',
+    description:
+      'Intelligent automation, AI integrations, and workflow systems that eliminate manual work. Connect your existing tools, build smart pipelines, and let software handle the repetitive tasks.',
+    technologies: ['Python', 'OpenAI', 'Anthropic', 'LangChain'],
+  },
+  {
+    icon: 'cloud',
+    title: 'Cloud & Infrastructure',
+    description:
+      'Production cloud infrastructure on AWS and GCP. CI/CD pipelines, monitoring, scaling, and Infrastructure as Code with Terraform. Engineered for reliability and cost efficiency.',
+    technologies: ['AWS', 'GCP', 'Terraform', 'Docker'],
+  },
+  {
+    icon: 'rocket_launch',
+    title: 'Custom Platforms',
+    description:
+      'Turn a product idea into production software. We handle architecture, development, deployment, and iteration. League Handicap went from concept to paying customers in under a month.',
+    technologies: ['Full stack', 'per project'],
+  },
+  {
+    icon: 'psychology',
+    title: 'Architecture & Strategy',
+    description:
+      'Architecture reviews, technology selection, system audits, migration planning, and code quality assessments. Hands-on technical leadership grounded in 7+ years across ad tech, fintech, logistics, and secure communications.',
+    technologies: [],
+  },
+];
+
+export const categoryBarItems = [
+  { icon: 'devices', label: 'Web & Mobile Apps', anchor: 'web-apps' },
+  { icon: 'cloud', label: 'Cloud & DevOps', anchor: 'cloud-infrastructure' },
+  { icon: 'smart_toy', label: 'AI & Automation', anchor: 'ai-automation' },
+  { icon: 'rocket_launch', label: 'Custom Platforms', anchor: 'custom-platforms' },
+  { icon: 'architecture', label: 'Architecture & Strategy', anchor: 'architecture-strategy' },
+];
+
+export const techStack = [
+  // Languages
+  'TypeScript',
+  'Python',
+  'Go',
+  'Dart',
+  'Rust',
+  'Java',
+  'Swift',
+  'Kotlin',
+  'SQL',
+  // Frontend
+  'React',
+  'Next.js',
+  'Vue.js',
+  'Svelte',
+  'Tailwind CSS',
+  'HTMX',
+  // Mobile
+  'Flutter',
+  'React Native',
+  'iOS',
+  'Android',
+  // Backend
+  'Django',
+  'FastAPI',
+  'Flask',
+  'Node.js',
+  'Express',
+  'GraphQL',
+  'gRPC',
+  // Data
+  'PostgreSQL',
+  'MongoDB',
+  'Redis',
+  'MySQL',
+  'DynamoDB',
+  'Elasticsearch',
+  'SQLite',
+  // Cloud & Infra
+  'AWS',
+  'GCP',
+  'Azure',
+  'Terraform',
+  'Docker',
+  'Kubernetes',
+  'Cloudflare',
+  'Vercel',
+  'Linux',
+  'Nginx',
+  // CI/CD & DevOps
+  'GitHub Actions',
+  'GitLab CI',
+  'Jenkins',
+  'Datadog',
+  'Grafana',
+  'Prometheus',
+  'Sentry',
+  // Messaging & Queues
+  'Kafka',
+  'RabbitMQ',
+  'SQS',
+  // AI & ML
+  'OpenAI',
+  'Anthropic',
+  'LangChain',
+  'Hugging Face',
+  'PyTorch',
+  'TensorFlow',
+  // BaaS & Services
+  'Firebase',
+  'Supabase',
+  'Stripe',
+  'Twilio',
+  'SendGrid',
+  'Auth0',
+  // Tools
+  'Git',
+  'Figma',
+  'Postman',
+];
+
+export const serviceDetails = [
+  {
+    slug: 'web-apps',
+    icon: 'web',
+    title: 'Web Applications',
+    longDescription:
+      'We build full-stack web applications from the ground up — internal tools, customer-facing portals, SaaS products, admin platforms, and complex multi-tenant systems. Every project is architected for performance, security, and long-term maintainability.\n\nOur web work spans React and Next.js on the frontend, Django, Node.js, and Go on the backend, with PostgreSQL or MongoDB for data. We handle authentication, authorization, real-time features, third-party integrations, and deployment infrastructure as part of every build.',
+    technologies: [
+      'React',
+      'Next.js',
+      'Django',
+      'Node.js',
+      'TypeScript',
+      'Go',
+      'PostgreSQL',
+      'Redis',
+    ],
+    typicalProjects: [
+      'Internal dashboards and admin platforms',
+      'Customer-facing SaaS products',
+      'Multi-tenant portals with auth and billing',
+      'Data-heavy reporting and analytics tools',
+    ],
+  },
+  {
+    slug: 'mobile-apps',
+    icon: 'smartphone',
+    title: 'Mobile Apps',
+    longDescription:
+      'Cross-platform mobile applications for iOS and Android, built with Flutter. From concept through App Store deployment — including design, development, testing, and launch.\n\nFlutter lets us ship native-quality apps to both platforms from a single codebase, which means faster delivery and lower cost without sacrificing performance. We handle push notifications, offline support, camera/GPS integrations, and App Store review processes.',
+    technologies: ['Flutter', 'Dart', 'iOS', 'Android', 'Firebase'],
+    typicalProjects: [
+      'Customer-facing mobile apps',
+      'Field service and workforce tools',
+      'Companion apps for web platforms',
+    ],
+  },
+  {
+    slug: 'ai-automation',
+    icon: 'smart_toy',
+    title: 'AI & Automation',
+    longDescription:
+      'Intelligent automation, AI integrations, and workflow systems that eliminate manual work. We connect your existing tools, build smart data pipelines, and deploy AI where it actually saves time — not as a buzzword, but as a practical tool.\n\nOur AI work includes LLM integrations (OpenAI, Anthropic), document processing, automated classification, and custom chatbots. On the automation side, we build system-to-system integrations, scheduled workflows, and event-driven pipelines that replace hours of manual data entry.',
+    technologies: ['Python', 'OpenAI', 'Anthropic', 'LangChain', 'Node.js'],
+    typicalProjects: [
+      'AI-powered document processing and classification',
+      'System-to-system workflow automation',
+      'Custom chatbots and conversational interfaces',
+      'Data pipeline automation and ETL',
+    ],
+  },
+  {
+    slug: 'cloud-infrastructure',
+    icon: 'cloud',
+    title: 'Cloud & Infrastructure',
+    longDescription:
+      'Production cloud infrastructure on AWS and GCP. CI/CD pipelines, monitoring, scaling, and Infrastructure as Code with Terraform. Engineered for reliability, security, and cost efficiency.\n\nWe design and deploy the infrastructure that keeps your software running — from initial architecture through ongoing operations. Whether you need to set up a new environment from scratch, migrate off legacy hosting, or fix a deployment process that relies on one person running scripts manually.',
+    technologies: [
+      'AWS',
+      'GCP',
+      'Terraform',
+      'Docker',
+      'Kubernetes',
+      'GitHub Actions',
+      'Linux',
+      'Nginx',
+    ],
+    typicalProjects: [
+      'Cloud migration from legacy hosting',
+      'CI/CD pipeline setup and optimization',
+      'Infrastructure as Code with Terraform',
+      'Monitoring, alerting, and incident response',
+    ],
+  },
+  {
+    slug: 'custom-platforms',
+    icon: 'rocket_launch',
+    title: 'Custom Platforms',
+    longDescription:
+      'Turn a product idea into production software. We handle architecture, development, deployment, and iteration — from the first wireframe to paying customers.\n\nLeague Handicap went from concept to live product with revenue in under a month. That kind of speed comes from having one senior engineer who owns the entire stack — no handoffs, no coordination overhead, no waiting on other teams.',
+    technologies: ['Full stack', 'per project'],
+    typicalProjects: [
+      'MVP development for startup founders',
+      'Industry-specific SaaS platforms',
+      'Marketplace and multi-sided platforms',
+      'Products transitioning from spreadsheet to software',
+    ],
+  },
+  {
+    slug: 'architecture-strategy',
+    icon: 'architecture',
+    title: 'Architecture & Strategy',
+    longDescription:
+      "Architecture reviews, technology selection, system audits, migration planning, and code quality assessments. Hands-on technical leadership for teams that need senior guidance without a full build engagement.\n\nSometimes you don't need someone to write the code — you need someone to tell you what to build, how to structure it, and what to avoid. We bring 7+ years across ad tech, fintech, logistics, and secure communications to every advisory engagement.",
+    technologies: [],
+    typicalProjects: [
+      'Architecture reviews and system audits',
+      'Technology selection for new projects',
+      'Legacy system modernization roadmaps',
+      'Cloud migration planning',
+    ],
   },
 ];

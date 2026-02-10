@@ -7,6 +7,8 @@ interface FormData {
   name: string;
   email: string;
   company: string;
+  projectType: string;
+  projectStage: string;
   message: string;
 }
 
@@ -15,13 +17,17 @@ export function ContactForm() {
     name: '',
     email: '',
     company: '',
+    projectType: '',
+    projectStage: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -119,17 +125,90 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Project Type + Project Stage */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="space-y-2">
+          <label htmlFor="projectType" className="block text-sm font-semibold text-charcoal">
+            Project Type
+          </label>
+          <select
+            id="projectType"
+            name="projectType"
+            value={formData.projectType}
+            onChange={handleChange}
+            className={`w-full appearance-none rounded-lg border-[1.5px] border-stone/20 bg-white px-4 py-3 transition-all duration-200 focus:border-forest focus:outline-none focus:ring-4 focus:ring-forest/10 ${formData.projectType ? 'text-charcoal' : 'text-stone/40'}`}
+          >
+            <option value="" disabled>
+              Select a project type...
+            </option>
+            <option value="Web Application" className="text-charcoal">
+              Web Application
+            </option>
+            <option value="Mobile App" className="text-charcoal">
+              Mobile App
+            </option>
+            <option value="AI / Automation" className="text-charcoal">
+              AI / Automation
+            </option>
+            <option value="Cloud & Infrastructure" className="text-charcoal">
+              Cloud &amp; Infrastructure
+            </option>
+            <option value="Custom Platform / Product" className="text-charcoal">
+              Custom Platform / Product
+            </option>
+            <option value="Consulting / Strategy" className="text-charcoal">
+              Consulting / Strategy
+            </option>
+            <option value="Other" className="text-charcoal">
+              Other
+            </option>
+          </select>
+        </div>
+
+        <div className="space-y-2">
+          <label htmlFor="projectStage" className="block text-sm font-semibold text-charcoal">
+            Project Stage
+          </label>
+          <select
+            id="projectStage"
+            name="projectStage"
+            value={formData.projectStage}
+            onChange={handleChange}
+            className={`w-full appearance-none rounded-lg border-[1.5px] border-stone/20 bg-white px-4 py-3 transition-all duration-200 focus:border-forest focus:outline-none focus:ring-4 focus:ring-forest/10 ${formData.projectStage ? 'text-charcoal' : 'text-stone/40'}`}
+          >
+            <option value="" disabled>
+              Where are you in the process?
+            </option>
+            <option value="Just an idea" className="text-charcoal">
+              Just an idea
+            </option>
+            <option value="Requirements defined" className="text-charcoal">
+              Requirements defined
+            </option>
+            <option value="Existing system needs work" className="text-charcoal">
+              Existing system needs work
+            </option>
+            <option value="Replacing a failed project" className="text-charcoal">
+              Replacing a failed project
+            </option>
+            <option value="Not sure yet" className="text-charcoal">
+              Not sure yet
+            </option>
+          </select>
+        </div>
+      </div>
+
       {/* Message */}
       <div className="space-y-2">
         <label htmlFor="message" className="block text-sm font-semibold text-charcoal">
-          How can we help?
+          Tell us about your project
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={4}
-          placeholder="Tell us about your project..."
+          placeholder="Describe what you're looking to build or the problem you're trying to solve..."
           value={formData.message}
           onChange={handleChange}
           className="w-full resize-none rounded-lg border-[1.5px] border-stone/20 bg-white px-4 py-3 text-charcoal placeholder:text-stone/40 transition-all duration-200 focus:border-forest focus:outline-none focus:ring-4 focus:ring-forest/10"

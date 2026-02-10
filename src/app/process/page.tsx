@@ -6,7 +6,7 @@ import ProcessTrail from '@/components/sections/ProcessTrail';
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'How Summit Studio builds custom software: free consultation, clear proposal, milestone demos, launch, and training. 6-16 week delivery for Cookeville, TN businesses.',
+    'How Summit Studio builds software: free consultation, clear proposal, milestone demos, launch, and training. 4-20+ week delivery.',
   alternates: {
     canonical: '/process',
   },
@@ -25,22 +25,22 @@ export default function ProcessPage() {
             className="animate-fade-in-up inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider uppercase text-forest bg-forest/10 rounded-full"
             style={{ animationDelay: '0ms' }}
           >
-            Our Workflow
+            Our Process
           </span>
           <h1
             className="animate-fade-in-up font-serif text-5xl md:text-7xl lg:text-8xl text-forest leading-[0.9] mb-8"
             style={{ animationDelay: '150ms' }}
           >
-            A Guided Path to
+            A Clear Path to
             <br />
-            <span className="italic text-accent">Efficiency</span>
+            <span className="italic text-accent">Production</span>
           </h1>
           <p
             className="animate-fade-in-up max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed"
             style={{ animationDelay: '300ms' }}
           >
-            We map out the terrain of your business to build automation that scales. Like any great
-            expedition, our process is structured, strategic, and designed to reach the summit.
+            Every project follows the same disciplined process — whether it&apos;s a 4-week
+            automation build or a 6-month platform. Structured, transparent, and designed to ship.
           </p>
         </div>
       </section>
@@ -48,9 +48,17 @@ export default function ProcessPage() {
       {/* The Trail (Process Steps) */}
       <ProcessTrail />
 
+      {/* Scaling Note */}
+      <div className="max-w-3xl mx-auto px-6 py-8 text-center">
+        <p className="text-stone text-lg italic">
+          "Process scales to project size. A 4-week automation build gets the same rigor as a
+          6-month platform — just at a different pace."
+        </p>
+      </div>
+
       {/* CTA Section */}
       <section className="w-full px-4 md:px-10 pb-20">
-        <div className="max-w-7xl mx-auto rounded-2xl bg-charcoal text-white overflow-hidden relative shadow-xl">
+        <div className="max-w-7xl mx-auto rounded-2xl bg-forest text-white overflow-hidden relative shadow-xl">
           {/* Subtle gradient overlay */}
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 
@@ -62,11 +70,11 @@ export default function ProcessPage() {
               flag
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
-              Ready to reach the summit?
+              Ready to start building?
             </h2>
-            <p className="text-stone-300 text-lg md:text-xl max-w-2xl mb-10 font-light">
-              Start your journey towards efficiency and automation today. Let&apos;s build a system
-              that works as hard as you do.
+            <p className="text-white/70 text-lg md:text-xl max-w-2xl mb-10 font-light">
+              Tell us what you need. We&apos;ll walk you through how we&apos;d approach it —
+              timeline, architecture, and cost.
             </p>
             <Button
               variant="cta"
@@ -74,7 +82,7 @@ export default function ProcessPage() {
               asChild
               className="text-lg py-4 px-10 hover:bg-[#cf7540] hover:-translate-y-1 shadow-lg hover:shadow-accent/30 transition-all"
             >
-              <Link href="/contact">Start Your Journey</Link>
+              <Link href="/contact">Schedule a Conversation</Link>
             </Button>
           </div>
         </div>

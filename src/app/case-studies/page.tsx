@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
-    'See how Summit Studio helps Cookeville, TN businesses replace manual processes with custom software. Real results: time saved, errors eliminated, revenue generated.',
+    'See how Summit Studio turns ideas into production software. Real projects, real outcomes, real business impact.',
   alternates: {
     canonical: '/case-studies',
   },
@@ -70,8 +70,7 @@ export default function CaseStudiesPage() {
             className="animate-fade-in-up max-w-2xl text-lg md:text-xl text-stone leading-relaxed"
             style={{ animationDelay: '300ms' }}
           >
-            See how we help businesses replace manual processes with custom software that scales,
-            performs, and delivers results.
+            See how we turn ideas into production software — from concept through launch and beyond.
           </p>
         </div>
       </section>
@@ -125,6 +124,20 @@ export default function CaseStudiesPage() {
                       ))}
                     </div>
 
+                    {/* Tags */}
+                    {study.tags && study.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {study.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-block rounded-md bg-stone/5 px-2.5 py-0.5 text-xs font-medium text-stone"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
                     {/* Read More */}
                     <div className="pt-4 mt-auto border-t border-stone/10">
                       <span className="inline-flex items-center text-forest font-bold group-hover:text-accent transition-colors">
@@ -145,16 +158,14 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Bottom CTA — full-width */}
-      <section className="bg-charcoal text-white py-20 px-6 lg:px-12 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-forest/5 rounded-l-full blur-3xl pointer-events-none opacity-50" />
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
-            Let&apos;s build something for your business.
+      {/* Bottom CTA — inline */}
+      <section className="py-20 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
+            Want results like these?
           </h2>
-          <p className="text-stone-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            Every project starts with a conversation. Tell us what&apos;s slowing you down.
+          <p className="text-stone text-lg md:text-xl max-w-2xl mx-auto mb-10">
+            Every project starts with a conversation. Tell us what you&apos;re building.
           </p>
           <Button
             variant="cta"
@@ -162,7 +173,7 @@ export default function CaseStudiesPage() {
             asChild
             className="text-lg py-4 px-10 hover:bg-[#cf7540] hover:scale-105 shadow-lg transition-all"
           >
-            <Link href="/contact">Schedule a Conversation</Link>
+            <Link href="/contact">Start Yours</Link>
           </Button>
         </div>
       </section>
