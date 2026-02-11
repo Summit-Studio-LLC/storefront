@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { AttributionCapture } from '@/components/AttributionCapture';
 import { siteConfig } from '@/data/site';
 import { getLocalBusinessSchema, getOrganizationSchema } from '@/lib/schema';
 import './globals.css';
@@ -114,6 +115,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <AttributionCapture />
         <Analytics />
         <SpeedInsights />
       </body>

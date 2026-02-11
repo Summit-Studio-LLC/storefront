@@ -23,9 +23,9 @@ const modelCards = [
   {
     icon: 'groups',
     title: 'Our Team',
-    tagline: 'Mentored, Reviewed, Production-Ready',
+    tagline: 'The Teaching Hospital Model',
     description:
-      'Tennessee Tech CS students work on real client projects under direct senior mentorship. Every line of code is reviewed by a senior engineer before it ships. This is how we scale without compromising quality — and how we keep costs honest.',
+      'Like a teaching hospital where attending physicians lead care while residents learn by doing, our senior engineers lead every project while mentored developers contribute under direct supervision. The result is more thorough code review, better documentation, and built-in accountability — your software gets more attention, not less.',
   },
   {
     icon: 'hub',
@@ -97,16 +97,16 @@ export default function AboutPage() {
             className="animate-fade-in-up mb-8 max-w-3xl font-serif text-5xl leading-[1.1] text-forest md:text-7xl"
             style={{ animationDelay: '150ms' }}
           >
-            Engineering depth. Studio accountability.
+            Built to teach. Built to last.
           </h1>
           <p
             className="animate-fade-in-up max-w-2xl text-lg leading-relaxed text-stone md:text-xl"
             style={{ animationDelay: '300ms' }}
           >
-            Summit Studio is a software development studio based in Cookeville, Tennessee. We build
-            web applications, mobile apps, cloud systems, and automation tools for businesses that
-            need real engineering — without the agency overhead. Every project is led by a senior
-            engineer. Every line of code is reviewed before it ships.
+            Summit Studio is a software development studio based in Cookeville, Tennessee — built on
+            the teaching hospital model for software. Senior engineers lead every project. Mentored
+            developers contribute under direct supervision. Every line of code is reviewed before it
+            ships. The result: higher-quality software and trained engineers for the industry.
           </p>
         </div>
       </section>
@@ -117,7 +117,8 @@ export default function AboutPage() {
           <FadeUp className="mb-12 text-center md:text-left">
             <h2 className="mb-4 font-serif text-4xl text-forest">How We Work</h2>
             <p className="max-w-xl text-stone">
-              A lean model designed to deliver senior-quality work at honest prices.
+              The teaching hospital model — where senior oversight and mentored development produce
+              higher-quality software.
             </p>
           </FadeUp>
 
@@ -207,6 +208,44 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Where We're Going */}
+      <section className="w-full px-6 py-20">
+        <div className="mx-auto max-w-[720px]">
+          <FadeUp>
+            <h2 className="font-serif text-4xl text-forest mb-10 text-center">
+              Where We&apos;re Going
+            </h2>
+          </FadeUp>
+          <FadeUp>
+            <div className="space-y-6 text-lg leading-[1.8] text-stone">
+              <p>
+                Today, every project we take on makes us better. Senior engineers refine their
+                teaching. Mentored developers sharpen their craft on real problems. The software we
+                ship gets more reliable, and the process that produces it gets more disciplined.
+                We&apos;re building a studio where quality compounds over time — not one that
+                stretches thinner as it grows.
+              </p>
+              <p>
+                As we take on more projects across different industries, we&apos;re building
+                something deeper than a portfolio — we&apos;re developing real expertise in the
+                verticals we serve. Every engagement teaches us how that industry actually operates,
+                where the common failure points are, and what solutions hold up over time.
+                We&apos;re turning that experience into proven delivery patterns and playbooks so
+                each new client benefits from everything we&apos;ve already learned.
+              </p>
+              <p>
+                Long-term, the most valuable thing we can offer isn&apos;t code — it&apos;s
+                perspective. After working across enough industries and enough projects, we start to
+                see the patterns our clients can&apos;t: the bottleneck that&apos;s quietly costing
+                them, the process that&apos;s about to break at scale, the opportunity hiding in
+                data they already have. That&apos;s where we&apos;re headed — a partner who
+                genuinely understands your business, not just your tech stack.
+              </p>
+            </div>
+          </FadeUp>
         </div>
       </section>
 

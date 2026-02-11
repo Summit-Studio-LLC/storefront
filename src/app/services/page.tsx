@@ -21,9 +21,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
 const deliveryPrinciples = [
   {
-    title: 'Senior-led, every project',
+    title: 'Senior-led, mentor-reviewed',
     description:
-      'You work directly with the engineer writing the code. No handoffs to junior devs. No telephone game through project managers.',
+      'Every project is led by a senior engineer who reviews all code before it ships. Mentored students contribute under direct supervision — more eyes on your code, more thorough quality assurance.',
   },
   {
     title: 'Fixed scope, honest pricing',
@@ -119,7 +119,7 @@ export default function ServicesPage() {
               What We Build
             </h2>
             <p className="mt-4 text-lg leading-8 text-stone">
-              Six capability areas. One team. Every project senior-led.
+              Six capability areas. One team. Senior-led and mentor-reviewed.
             </p>
           </FadeUp>
 

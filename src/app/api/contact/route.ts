@@ -4,18 +4,45 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+interface Attribution {
+  landingPage?: string;
+  referrer?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmTerm?: string;
+  utmContent?: string;
+}
+
 interface ContactFormData {
   name: string;
   email: string;
   company: string;
   message: string;
+  attribution?: Attribution | null;
+}
+
+function formatAttribution(attr: Attribution | null | undefined): string {
+  if (!attr) return 'No attribution data';
+
+  const lines: string[] = [];
+
+  if (attr.landingPage) lines.push(`Landing Page: ${attr.landingPage}`);
+  if (attr.referrer) lines.push(`Referrer: ${attr.referrer}`);
+  if (attr.utmSource) lines.push(`Source: ${attr.utmSource}`);
+  if (attr.utmMedium) lines.push(`Medium: ${attr.utmMedium}`);
+  if (attr.utmCampaign) lines.push(`Campaign: ${attr.utmCampaign}`);
+  if (attr.utmTerm) lines.push(`Term: ${attr.utmTerm}`);
+  if (attr.utmContent) lines.push(`Content: ${attr.utmContent}`);
+
+  return lines.length > 0 ? lines.join('\n') : 'Direct visit (no UTM params)';
 }
 
 export async function POST(request: Request) {
   try {
     const body: ContactFormData = await request.json();
 
-    const { name, email, company, message } = body;
+    const { name, email, company, message, attribution } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -36,6 +63,9 @@ export async function POST(request: Request) {
         '',
         'Message:',
         message,
+        '',
+        '--- Attribution ---',
+        formatAttribution(attribution),
       ].join('\n'),
     });
 

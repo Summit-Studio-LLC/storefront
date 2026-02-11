@@ -18,7 +18,12 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'How is Summit Studio different from a big agency?',
         answer:
-          'You get the same caliber of engineering as a 50-person agency — minus the overhead. No project managers relaying messages. No offshore teams. No account executives. You work directly with the senior engineer building your software. Our model is lean by design: senior-led development, reviewed code, honest pricing.',
+          "We run on a teaching hospital model — senior engineers lead every project while mentored developers contribute under direct supervision. That means more eyes on your code, rigorous review on every pull request, and built-in accountability that agencies can't match. You get the depth of a senior team with the thoroughness of a structured training environment.",
+      },
+      {
+        question: 'What is the teaching hospital model?',
+        answer:
+          'In a teaching hospital, attending physicians lead patient care while residents contribute under supervision — and the result is often better outcomes than private practice because every decision is explained, documented, and reviewed. We apply the same principle to software: senior engineers architect and review every project, mentored developers contribute additional capacity and fresh perspectives, and every line of code is reviewed before it ships. Two outputs from one process — great software for you, trained engineers for the industry.',
       },
       {
         question: 'Who are your clients?',
@@ -86,7 +91,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Who actually builds the software?',
         answer:
-          'Our founder leads every project. As we grow, Tennessee Tech CS students contribute under direct senior mentorship — every line of code is reviewed by a senior engineer before it ships. You get affordable rates backed by professional-grade quality.',
+          'A senior engineer leads every project — architecting the system, reviewing every pull request, and owning the final quality. Mentored developers from Tennessee Tech contribute under direct supervision, bringing additional capacity and thorough QA. Every line of code is reviewed by a senior engineer before it ships. This is how teaching hospitals produce better outcomes: more oversight, more documentation, more accountability.',
       },
     ],
   },

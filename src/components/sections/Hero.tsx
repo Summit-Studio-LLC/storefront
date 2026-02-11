@@ -41,8 +41,10 @@ export default function Hero() {
           className="animate-fade-in-up text-lg md:text-xl text-stone max-w-2xl font-medium leading-relaxed"
           style={{ animationDelay: '300ms' }}
         >
-          Your idea, architected and deployed by a senior engineer. Fixed-price projects. No
-          handoffs, no surprises.
+          We&apos;re a development studio that treats every project like it matters — because it
+          does. You get a dedicated team that understands your goals, writes code that&apos;s
+          reviewed before it ever reaches production, and keeps you in the loop from day one to
+          launch. No agencies, no outsourcing, no guesswork.
         </p>
 
         {/* CTAs */}

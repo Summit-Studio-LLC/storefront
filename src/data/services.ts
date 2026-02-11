@@ -163,6 +163,11 @@ export const outcomePoints = [
       'Built on proven technology with clean code, real documentation, and infrastructure that grows as your business does.',
   },
   {
+    title: 'More eyes on every line of code',
+    description:
+      'Our teaching model means every pull request is reviewed by a senior engineer before it ships. Mentored students bring fresh perspectives and additional QA — your project gets more attention, not less.',
+  },
+  {
     title: 'A partner, not a vendor',
     description:
       'Direct access to the engineer building your product. No account managers, no ticket queues. When you call, the person who wrote the code answers.',
@@ -383,7 +388,7 @@ export const serviceDetails = [
     icon: 'rocket_launch',
     title: 'Custom Platforms',
     longDescription:
-      'Turn a product idea into production software. We handle architecture, development, deployment, and iteration — from the first wireframe to paying customers.\n\nLeague Handicap went from concept to live product with revenue in under a month. That kind of speed comes from having one senior engineer who owns the entire stack — no handoffs, no coordination overhead, no waiting on other teams.',
+      'Turn a product idea into production software. We handle architecture, development, deployment, and iteration — from the first wireframe to paying customers.\n\nLeague Handicap went from concept to live product with revenue in under a month. That kind of speed comes from a senior engineer who owns the entire stack — clear leadership, no coordination overhead, no waiting on other teams.',
     technologies: ['Full stack', 'per project'],
     typicalProjects: [
       'MVP development for startup founders',

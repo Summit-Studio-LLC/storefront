@@ -3,15 +3,16 @@ import Link from 'next/link';
 import Hero from '@/components/sections/Hero';
 import CategoryBar from '@/components/sections/CategoryBar';
 import TechMarquee from '@/components/sections/TechMarquee';
+import TeachingModel from '@/components/sections/TeachingModel';
 import { Button } from '@/components/ui/button';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { frictionPoints, outcomePoints } from '@/data/services';
 import { getWebSiteSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Summit Studio | Custom Software to Elevate Your Business',
+  title: 'Summit Studio | The Teaching Hospital for Software',
   description:
-    'Custom software development — web apps, mobile apps, cloud infrastructure, and AI automation. Senior-led, no overhead. Based in Tennessee, serving clients nationwide.',
+    'Custom software built by senior engineers and mentored developers — the teaching hospital model for software. Every line reviewed. Based in Tennessee, serving clients nationwide.',
   alternates: { canonical: '/' },
 };
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Hero />
       <CategoryBar />
       <TechMarquee />
+      <TeachingModel />
 
       {/* Sound Familiar? (Friction Points) */}
       <section className="py-24 px-6 lg:px-8">
@@ -67,7 +69,8 @@ export default function Home() {
               What You Get
             </h2>
             <p className="text-lg text-stone mb-8 leading-relaxed">
-              We measure success by what ships and how long it lasts.
+              We measure success by what ships, how long it lasts, and how rigorously it was
+              reviewed.
             </p>
             <div className="space-y-6">
               {outcomePoints.map((point) => (
@@ -123,7 +126,8 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-stone text-lg">Based in Cookeville, Tennessee</p>
           <p className="text-stone/70">
-            Serving clients nationwide · 7+ years of professional software engineering
+            Serving clients nationwide · Senior-led, student-mentored · 7+ years of professional
+            software engineering
           </p>
         </div>
       </section>

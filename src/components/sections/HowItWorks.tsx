@@ -1,3 +1,5 @@
+import { FadeUp } from '@/components/ui/FadeUp';
+
 const steps = [
   {
     number: '1',
@@ -18,20 +20,33 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-offwhite px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="mb-12 text-center text-3xl font-bold text-forest md:text-4xl">
-          How It Works
-        </h2>
-        <div className="grid gap-8 md:grid-cols-3">
-          {steps.map((step) => (
-            <div key={step.number} className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-forest text-2xl font-bold text-white">
+    <section className="py-24 px-6 lg:px-8 bg-offwhite">
+      <div className="mx-auto max-w-5xl">
+        <FadeUp className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-forest sm:text-4xl">
+            How It Works
+          </h2>
+        </FadeUp>
+
+        <div className="relative grid gap-12 md:grid-cols-3 md:gap-8">
+          {/* Connecting trail line (desktop) */}
+          <div
+            className="hidden md:block absolute top-7 left-[16.67%] right-[16.67%] h-0.5"
+            style={{
+              backgroundImage:
+                'linear-gradient(to right, transparent, #d6d3d1 10%, #d6d3d1 90%, transparent)',
+            }}
+            aria-hidden="true"
+          />
+
+          {steps.map((step, index) => (
+            <FadeUp key={step.number} delay={index * 150} className="text-center relative">
+              <div className="relative z-10 mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-forest text-2xl font-bold text-white shadow-md ring-4 ring-offwhite">
                 {step.number}
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-stone">{step.title}</h3>
-              <p className="text-stone">{step.description}</p>
-            </div>
+              <h3 className="text-xl font-bold text-forest mb-3">{step.title}</h3>
+              <p className="text-stone leading-relaxed">{step.description}</p>
+            </FadeUp>
           ))}
         </div>
       </div>

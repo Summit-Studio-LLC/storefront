@@ -30,7 +30,7 @@ const processSteps: ProcessStepData[] = [
     title: 'Implementation',
     icon: 'construction',
     description:
-      'Building the tools. Our engineers construct your custom automation systems, integrating APIs and workflows with precision engineering.',
+      'Building the tools. Our team builds your custom systems, integrating APIs and workflows with precision engineering.',
   },
   {
     phase: '04',

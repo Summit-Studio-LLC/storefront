@@ -39,8 +39,8 @@ export default function ProcessPage() {
             className="animate-fade-in-up max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed"
             style={{ animationDelay: '300ms' }}
           >
-            Every project follows the same disciplined process — whether it&apos;s a 4-week
-            automation build or a 6-month platform. Structured, transparent, and designed to ship.
+            Senior-led, mentor-reviewed, and designed to ship. Every project follows the same
+            disciplined process — whether it&apos;s a 4-week automation build or a 6-month platform.
           </p>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function ProcessPage() {
 
       {/* CTA Section */}
       <section className="w-full px-4 md:px-10 pb-20">
-        <div className="max-w-7xl mx-auto rounded-2xl bg-forest text-white overflow-hidden relative shadow-xl">
+        <div className="max-w-7xl mx-auto rounded-2xl bg-charcoal text-white overflow-hidden relative shadow-xl">
           {/* Subtle gradient overlay */}
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 

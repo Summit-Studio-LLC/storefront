@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Summit Studio',
-  tagline: 'Custom Software to Elevate Your Business',
+  tagline: 'Software That Ships. Engineers Who Grow.',
   description:
-    'Custom software development — web apps, mobile apps, cloud infrastructure, and AI automation. Senior-led, no overhead. Based in Tennessee, serving clients nationwide.',
+    'Custom software built by senior engineers and mentored developers — the teaching hospital model for software. Every line reviewed. Based in Tennessee, serving clients nationwide.',
   url: 'https://www.summitstudio.dev',
   email: 'hello@summitstudio.dev',
   location: 'Cookeville, Tennessee',

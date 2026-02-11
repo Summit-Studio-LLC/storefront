@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { trackEvent } from '@/lib/analytics';
+import { getAttribution, type Attribution } from '@/lib/attribution';
 
 interface FormData {
   name: string;
@@ -24,6 +25,11 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [attribution, setAttribution] = useState<Attribution | null>(null);
+
+  useEffect(() => {
+    setAttribution(getAttribution());
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -41,7 +47,7 @@ export function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, attribution }),
       });
 
       if (!res.ok) {
