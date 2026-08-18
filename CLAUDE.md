@@ -36,7 +36,7 @@ src/
 │   ├── services/
 │   ├── process/
 │   ├── case-studies/
-│   │   └── league-handicap/
+│   │   └── [slug]/          # Dynamic detail page for every case study
 │   ├── faq/
 │   ├── contact/
 │   ├── privacy/
@@ -54,7 +54,7 @@ src/
 │   ├── navigation.ts    # Nav links + CTA link
 │   ├── services.ts      # Services, process steps, friction points
 │   ├── faq.ts           # FAQ content by category
-│   └── caseStudies.ts   # Case study content
+│   └── caseStudies.ts   # Case study content + showcase order + status model
 └── lib/
     ├── utils.ts         # Utilities (cn helper)
     ├── analytics.ts     # Custom event tracking (trackEvent)
@@ -108,4 +108,4 @@ When updating copy or pricing, check atlas for canonical source.
 ## Not Yet Implemented
 
 - [ ] Blog/MDX support
-- [ ] Additional case studies (structure ready, only League Handicap published)
+- [ ] Written-from-scratch case studies for products beyond the current five

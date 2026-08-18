@@ -1,9 +1,10 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FadeUp } from '@/components/ui/FadeUp';
-import { showcaseProjects } from '@/data/projects';
+import { caseStudies, statusMeta } from '@/data/caseStudies';
 import { getBreadcrumbSchema } from '@/lib/schema';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -26,25 +27,6 @@ const statIcons: Record<string, string> = {
   'Build time': 'construction',
   'To first revenue': 'trending_up',
 };
-
-const statusMeta = {
-  active: {
-    badge: 'In Progress',
-    badgeClass: 'bg-white/95 text-forest',
-    dotClass: 'bg-accent',
-    pulse: true,
-    footer: 'Currently in development',
-    footerIcon: 'construction',
-  },
-  paused: {
-    badge: 'Paused',
-    badgeClass: 'bg-white/90 text-stone',
-    dotClass: 'bg-stone/60',
-    pulse: false,
-    footer: 'Development on hold',
-    footerIcon: 'pause_circle',
-  },
-} as const;
 
 export default function CaseStudiesPage() {
   return (
@@ -100,31 +82,34 @@ export default function CaseStudiesPage() {
       <section className="py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {showcaseProjects.map((project, index) => {
-              const status = project.status === 'live' ? null : statusMeta[project.status];
+            {caseStudies.map((study, index) => {
+              const status = statusMeta[study.status];
 
-              const cardBody = (
-                <>
-                  {/* Image Placeholder */}
-                  <div className="relative h-64 overflow-hidden bg-gradient-to-br from-forest/90 to-emerald-800">
-                    <div className="flex items-center justify-center h-full">
-                      <span
-                        className="material-symbols-outlined !text-8xl text-white/20 transition-transform duration-500 group-hover:scale-110"
-                        aria-hidden="true"
-                      >
-                        {project.icon}
-                      </span>
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide">
-                        {project.category}
-                      </span>
-                    </div>
-                    {status && (
+              return (
+                <FadeUp key={study.slug} delay={index * 150}>
+                  <Link
+                    href={`/case-studies/${study.slug}`}
+                    className="group flex h-full flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  >
+                    {/* Product preview */}
+                    <div className="relative h-64 overflow-hidden bg-forest/5">
+                      <Image
+                        src={study.image}
+                        alt={study.imageAlt}
+                        width={1440}
+                        height={900}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/25 pointer-events-none" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide">
+                          {study.category}
+                        </span>
+                      </div>
                       <div className="absolute top-4 right-4">
                         <span
                           className={cn(
-                            'inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide',
+                            'inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide shadow-sm',
                             status.badgeClass
                           )}
                         >
@@ -147,56 +132,51 @@ export default function CaseStudiesPage() {
                           {status.badge}
                         </span>
                       </div>
-                    )}
-                  </div>
+                    </div>
 
-                  {/* Card Body */}
-                  <div className="flex flex-col flex-grow p-6 lg:p-8">
-                    <p className="text-accent font-bold tracking-widest text-xs uppercase mb-2">
-                      {project.name}
-                    </p>
-                    <h3 className="text-2xl font-serif text-forest mb-3 leading-tight group-hover:text-accent transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-stone mb-6 flex-grow">{project.subtitle}</p>
+                    {/* Card Body */}
+                    <div className="flex flex-col flex-grow p-6 lg:p-8">
+                      <h3 className="text-2xl font-serif text-forest mb-3 leading-tight group-hover:text-accent transition-colors">
+                        {study.title}
+                      </h3>
+                      <p className="text-stone mb-6 flex-grow">{study.subtitle}</p>
 
-                    {/* Stat Badges */}
-                    {project.stats && project.stats.length > 0 && (
-                      <div className="flex flex-wrap gap-3 mb-6">
-                        {project.stats.map((stat) => (
-                          <span
-                            key={stat.label}
-                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold whitespace-nowrap"
-                          >
+                      {/* Stat Badges */}
+                      {study.stats && study.stats.length > 0 && (
+                        <div className="flex flex-wrap gap-3 mb-6">
+                          {study.stats.map((stat) => (
                             <span
-                              className="material-symbols-outlined text-base"
-                              aria-hidden="true"
+                              key={stat.label}
+                              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold whitespace-nowrap"
                             >
-                              {statIcons[stat.label] || 'check_circle'}
+                              <span
+                                className="material-symbols-outlined text-base"
+                                aria-hidden="true"
+                              >
+                                {statIcons[stat.label] || 'check_circle'}
+                              </span>
+                              {stat.value} {stat.label}
                             </span>
-                            {stat.value} {stat.label}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+                          ))}
+                        </div>
+                      )}
 
-                    {/* Tags */}
-                    {project.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="inline-block rounded-md bg-stone/5 px-2.5 py-0.5 text-xs font-medium text-stone"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+                      {/* Tags */}
+                      {study.tags && study.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {study.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-block rounded-md bg-stone/5 px-2.5 py-0.5 text-xs font-medium text-stone"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
 
-                    {/* Footer */}
-                    <div className="pt-4 mt-auto border-t border-stone/10">
-                      {project.href ? (
+                      {/* Footer */}
+                      <div className="pt-4 mt-auto border-t border-stone/10">
                         <span className="inline-flex items-center text-forest font-bold group-hover:text-accent transition-colors">
                           Read Case Study
                           <span
@@ -206,33 +186,9 @@ export default function CaseStudiesPage() {
                             arrow_forward
                           </span>
                         </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1.5 text-stone font-bold">
-                          <span className="material-symbols-outlined text-base" aria-hidden="true">
-                            {status ? status.footerIcon : 'schedule'}
-                          </span>
-                          {status ? status.footer : 'Case study coming soon'}
-                        </span>
-                      )}
+                      </div>
                     </div>
-                  </div>
-                </>
-              );
-
-              return (
-                <FadeUp key={project.slug} delay={index * 150}>
-                  {project.href ? (
-                    <Link
-                      href={project.href}
-                      className="group flex h-full flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                      {cardBody}
-                    </Link>
-                  ) : (
-                    <div className="flex h-full flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10">
-                      {cardBody}
-                    </div>
-                  )}
+                  </Link>
                 </FadeUp>
               );
             })}
