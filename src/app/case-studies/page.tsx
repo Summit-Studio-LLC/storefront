@@ -1,8 +1,9 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FadeUp } from '@/components/ui/FadeUp';
-import { caseStudies } from '@/data/caseStudies';
+import { showcaseProjects } from '@/data/projects';
 import { getBreadcrumbSchema } from '@/lib/schema';
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -25,6 +26,25 @@ const statIcons: Record<string, string> = {
   'Build time': 'construction',
   'To first revenue': 'trending_up',
 };
+
+const statusMeta = {
+  active: {
+    badge: 'In Progress',
+    badgeClass: 'bg-white/95 text-forest',
+    dotClass: 'bg-accent',
+    pulse: true,
+    footer: 'Currently in development',
+    footerIcon: 'construction',
+  },
+  paused: {
+    badge: 'Paused',
+    badgeClass: 'bg-white/90 text-stone',
+    dotClass: 'bg-stone/60',
+    pulse: false,
+    footer: 'Development on hold',
+    footerIcon: 'pause_circle',
+  },
+} as const;
 
 export default function CaseStudiesPage() {
   return (
@@ -70,7 +90,8 @@ export default function CaseStudiesPage() {
             className="animate-fade-in-up max-w-2xl text-lg md:text-xl text-stone leading-relaxed"
             style={{ animationDelay: '300ms' }}
           >
-            See how we turn ideas into production software — from concept through launch and beyond.
+            See how we turn ideas into production software — the work we&apos;ve shipped, and
+            what&apos;s on the bench right now.
           </p>
         </div>
       </section>
@@ -79,12 +100,11 @@ export default function CaseStudiesPage() {
       <section className="py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {caseStudies.map((study, index) => (
-              <FadeUp key={study.slug} delay={index * 150}>
-                <Link
-                  href={`/case-studies/${study.slug}`}
-                  className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                >
+            {showcaseProjects.map((project, index) => {
+              const status = project.status === 'live' ? null : statusMeta[project.status];
+
+              const cardBody = (
+                <>
                   {/* Image Placeholder */}
                   <div className="relative h-64 overflow-hidden bg-gradient-to-br from-forest/90 to-emerald-800">
                     <div className="flex items-center justify-center h-full">
@@ -92,42 +112,78 @@ export default function CaseStudiesPage() {
                         className="material-symbols-outlined !text-8xl text-white/20 transition-transform duration-500 group-hover:scale-110"
                         aria-hidden="true"
                       >
-                        sports_golf
+                        {project.icon}
                       </span>
                     </div>
                     <div className="absolute top-4 left-4">
                       <span className="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide">
-                        {study.category}
+                        {project.category}
                       </span>
                     </div>
+                    {status && (
+                      <div className="absolute top-4 right-4">
+                        <span
+                          className={cn(
+                            'inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wide',
+                            status.badgeClass
+                          )}
+                        >
+                          <span className="relative flex h-2 w-2" aria-hidden="true">
+                            {status.pulse && (
+                              <span
+                                className={cn(
+                                  'absolute inline-flex h-full w-full rounded-full animate-pulse-ring',
+                                  status.dotClass
+                                )}
+                              />
+                            )}
+                            <span
+                              className={cn(
+                                'relative inline-flex h-2 w-2 rounded-full',
+                                status.dotClass
+                              )}
+                            />
+                          </span>
+                          {status.badge}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Card Body */}
                   <div className="flex flex-col flex-grow p-6 lg:p-8">
+                    <p className="text-accent font-bold tracking-widest text-xs uppercase mb-2">
+                      {project.name}
+                    </p>
                     <h3 className="text-2xl font-serif text-forest mb-3 leading-tight group-hover:text-accent transition-colors">
-                      {study.title}
+                      {project.title}
                     </h3>
-                    <p className="text-stone mb-6 flex-grow">{study.subtitle}</p>
+                    <p className="text-stone mb-6 flex-grow">{project.subtitle}</p>
 
                     {/* Stat Badges */}
-                    <div className="flex flex-wrap gap-3 mb-6">
-                      {study.stats.map((stat) => (
-                        <span
-                          key={stat.label}
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold whitespace-nowrap"
-                        >
-                          <span className="material-symbols-outlined text-base" aria-hidden="true">
-                            {statIcons[stat.label] || 'check_circle'}
+                    {project.stats && project.stats.length > 0 && (
+                      <div className="flex flex-wrap gap-3 mb-6">
+                        {project.stats.map((stat) => (
+                          <span
+                            key={stat.label}
+                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-forest/5 text-forest text-sm font-bold whitespace-nowrap"
+                          >
+                            <span
+                              className="material-symbols-outlined text-base"
+                              aria-hidden="true"
+                            >
+                              {statIcons[stat.label] || 'check_circle'}
+                            </span>
+                            {stat.value} {stat.label}
                           </span>
-                          {stat.value} {stat.label}
-                        </span>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Tags */}
-                    {study.tags && study.tags.length > 0 && (
+                    {project.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {study.tags.map((tag) => (
+                        {project.tags.map((tag) => (
                           <span
                             key={tag}
                             className="inline-block rounded-md bg-stone/5 px-2.5 py-0.5 text-xs font-medium text-stone"
@@ -138,22 +194,48 @@ export default function CaseStudiesPage() {
                       </div>
                     )}
 
-                    {/* Read More */}
+                    {/* Footer */}
                     <div className="pt-4 mt-auto border-t border-stone/10">
-                      <span className="inline-flex items-center text-forest font-bold group-hover:text-accent transition-colors">
-                        Read Case Study
-                        <span
-                          className="material-symbols-outlined ml-1 text-sm transition-transform duration-200 group-hover:translate-x-1"
-                          aria-hidden="true"
-                        >
-                          arrow_forward
+                      {project.href ? (
+                        <span className="inline-flex items-center text-forest font-bold group-hover:text-accent transition-colors">
+                          Read Case Study
+                          <span
+                            className="material-symbols-outlined ml-1 text-sm transition-transform duration-200 group-hover:translate-x-1"
+                            aria-hidden="true"
+                          >
+                            arrow_forward
+                          </span>
                         </span>
-                      </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-stone font-bold">
+                          <span className="material-symbols-outlined text-base" aria-hidden="true">
+                            {status ? status.footerIcon : 'schedule'}
+                          </span>
+                          {status ? status.footer : 'Case study coming soon'}
+                        </span>
+                      )}
                     </div>
                   </div>
-                </Link>
-              </FadeUp>
-            ))}
+                </>
+              );
+
+              return (
+                <FadeUp key={project.slug} delay={index * 150}>
+                  {project.href ? (
+                    <Link
+                      href={project.href}
+                      className="group flex h-full flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    >
+                      {cardBody}
+                    </Link>
+                  ) : (
+                    <div className="flex h-full flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-stone/10">
+                      {cardBody}
+                    </div>
+                  )}
+                </FadeUp>
+              );
+            })}
           </div>
         </div>
       </section>
