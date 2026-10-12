@@ -79,7 +79,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 pt-8">
           <p className="text-stone text-sm text-center">
-            &copy; {currentYear} {siteConfig.name}. All rights reserved.
+            &copy; {currentYear} {siteConfig.legalName}. All rights reserved.
           </p>
         </div>
       </div>

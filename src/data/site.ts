@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: 'Summit Studio',
+  legalName: 'Summit Studio, LLC',
   tagline: 'Software That Ships. Engineers Who Grow.',
   description:
     'Custom software built by senior engineers and mentored developers — the teaching hospital model for software. Every line reviewed. Based in Tennessee, serving clients nationwide.',
